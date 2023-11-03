@@ -21,28 +21,28 @@ public class FinOperationController {
     }
 
     @PostMapping()
-    public ResponseEntity<?> save(@RequestBody FinOperationDTO dto) {
+    public ResponseEntity<FinOperationDTOResponse> save(@RequestBody FinOperationDTO dto) {
         FinOperation saved = service.save(new FinOperation(dto));
         return ResponseEntity.ok(new FinOperationDTOResponse(saved));
     }
 
-    @PostMapping("/batch")
-    public ResponseEntity<FinOperationDTOResponse[]> saveAll(@RequestBody FinOperationDTO[] dtoBatch) {
-        List<FinOperation> list = new ArrayList<>();
-        for (FinOperationDTO dto : dtoBatch) {
-            list.add(new FinOperation(dto));
-        }
-
-        List<FinOperation> saved = service.saveAll(list);
-
-        FinOperationDTOResponse[] toReturn = new FinOperationDTOResponse[saved.size()];
-
-        for (int i = 0; i < toReturn.length; i++) {
-            toReturn[i] = new FinOperationDTOResponse(saved.get(i));
-        }
-
-        return ResponseEntity.ok(toReturn);
-    }
+//    @PostMapping("/batch")
+//    public ResponseEntity<FinOperationDTOResponse[]> saveAll(@RequestBody FinOperationDTO[] dtoBatch) {
+//        List<FinOperation> list = new ArrayList<>();
+//        for (FinOperationDTO dto : dtoBatch) {
+//            list.add(new FinOperation(dto));
+//        }
+//
+//        List<FinOperation> saved = service.saveAll(list);
+//
+//        FinOperationDTOResponse[] toReturn = new FinOperationDTOResponse[saved.size()];
+//
+//        for (int i = 0; i < toReturn.length; i++) {
+//            toReturn[i] = new FinOperationDTOResponse(saved.get(i));
+//        }
+//
+//        return ResponseEntity.ok(toReturn);
+//    }
 
     @GetMapping("/{id}")
     public ResponseEntity<FinOperationDTOResponse> get(@PathVariable Long id) {
