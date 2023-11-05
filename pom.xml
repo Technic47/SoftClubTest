@@ -8,14 +8,17 @@
         <version>3.1.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>com.example</groupId>
     <artifactId>demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>demo</name>
     <description>demo</description>
+
     <properties>
         <java.version>17</java.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -36,6 +39,33 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.ws</groupId>
+            <artifactId>spring-ws-core</artifactId>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>javax.xml.bind</groupId>-->
+<!--            <artifactId>jaxb-api</artifactId>-->
+<!--            <version>2.4.0-b180830.0359</version>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
+            <version>4.0.0</version>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.glassfish.jaxb</groupId>-->
+<!--            <artifactId>jaxb-runtime</artifactId>-->
+<!--            <version>3.0.0</version>-->
+<!--            <scope>runtime</scope>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-impl</artifactId>
+            <version>4.0.2</version>
+            <scope>runtime</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -44,7 +74,87 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+
+<!--            <plugin>-->
+<!--                <groupId>com.sun.xml.ws</groupId>-->
+<!--                <artifactId>jaxws-maven-plugin</artifactId>-->
+<!--                <version>3.0.0</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <goals>-->
+<!--                            <goal>wsimport</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--                <configuration>-->
+<!--                    <packageName>com.example.demo.wsdl</packageName>-->
+<!--                    <wsdlUrls>-->
+<!--&lt;!&ndash;                        <wsdlUrl>${project.basedir}/src/main/resources/DailyInfo.wsdl</wsdlUrl>&ndash;&gt;-->
+<!--                        <wsdlUrl>http://www.w3.org/2001/XMLSchema.xsd</wsdlUrl>-->
+<!--                    </wsdlUrls>-->
+<!--                    <wsdlDirectory>${project.basedir}/src/main/resources/</wsdlDirectory>-->
+<!--                    <wsdlFiles>-->
+<!--                        <wsdlFile>DailyInfo.wsdl</wsdlFile>-->
+<!--                    </wsdlFiles>-->
+<!--                    <sourceDestDir>${sourcesDir}</sourceDestDir>-->
+<!--                    <destDir>${classesDir}</destDir>-->
+<!--                    <extension>true</extension>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+
+
+            <plugin>
+                <groupId>org.jvnet.jaxb2.maven2</groupId>
+                <artifactId>maven-jaxb2-plugin</artifactId>
+                <version>0.15.3</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <schemaLanguage>WSDL</schemaLanguage>
+                    <generateDirectory>${project.basedir}/src/main/java</generateDirectory>
+                    <generatePackage>com.softClub.Test.client.gen</generatePackage>
+                    <schemaDirectory>${project.basedir}/src/main/resources</schemaDirectory>
+                    <noFileHeader>true</noFileHeader>
+                    <schemas>
+                        <schema>
+                            <url>http://www.w3.org/2001/XMLSchema.xsd</url>
+                        </schema>
+                    </schemas>
+                    <schemaIncludes>
+                        <include>DailyInfo.wsdl</include>
+                    </schemaIncludes>
+                </configuration>
+            </plugin>
+
+<!--            <plugin>-->
+<!--                <groupId>org.codehaus.mojo</groupId>-->
+<!--                <artifactId>jaxb2-maven-plugin</artifactId>-->
+<!--                <version>3.1.0</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>xjc</id>-->
+<!--                        <goals>-->
+<!--                            <goal>xjc</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--                <configuration>-->
+<!--&lt;!&ndash;                    <xjbSources>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <xjbSource>src/main/resources/global.xjb</xjbSource>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </xjbSources>&ndash;&gt;-->
+<!--                    <sources>-->
+<!--                        <source>src/main/resources/ValuteData.xsd</source>-->
+<!--                    </sources>-->
+<!--                    <outputDirectory>${basedir}/src/main/java/com/softClub/Test/client/models</outputDirectory>-->
+<!--                    <clearOutputDir>false</clearOutputDir>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+
         </plugins>
     </build>
-
 </project>

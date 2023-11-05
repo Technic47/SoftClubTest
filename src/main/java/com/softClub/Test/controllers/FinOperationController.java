@@ -1,23 +1,25 @@
 package com.softClub.Test.controllers;
 
+import com.softClub.Test.client.gen.GetCursOnDateResponse;
 import com.softClub.Test.models.FinOperation;
 import com.softClub.Test.models.FinOperationDTO;
 import com.softClub.Test.models.FinOperationDTOResponse;
+import com.softClub.Test.services.DailyCurrencyClient;
 import com.softClub.Test.services.abstracts.CommonService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+import java.time.LocalDateTime;
 
 @RestController
 @RequestMapping("/operations")
 public class FinOperationController {
     private final CommonService<FinOperation> service;
+    private final DailyCurrencyClient client;
 
-    public FinOperationController(CommonService<FinOperation> service) {
+    public FinOperationController(CommonService<FinOperation> service, DailyCurrencyClient client) {
         this.service = service;
+        this.client = client;
     }
 
     @PostMapping()
@@ -48,5 +50,13 @@ public class FinOperationController {
     public ResponseEntity<FinOperationDTOResponse> get(@PathVariable Long id) {
         FinOperation found = service.getById(id);
         return ResponseEntity.ok(new FinOperationDTOResponse(found));
+    }
+
+    @GetMapping("/update")
+    public ResponseEntity<?> updateCurrencies(){
+        GetCursOnDateResponse response = client.getCursOnDate(LocalDateTime.now());
+        GetCursOnDateResponse.GetCursOnDateResult result = response.getGetCursOnDateResult();
+        System.out.println(result.getAny());
+        return ResponseEntity.ok("Request is sent.");
     }
 }
