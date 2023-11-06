@@ -1,6 +1,7 @@
 package com.softClub.Test.config;
 
 import com.softClub.Test.services.DailyCurrencyClient;
+import jakarta.xml.bind.Marshaller;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -13,6 +14,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
+import java.util.HashMap;
 import java.util.concurrent.Executor;
 
 @Configuration
@@ -32,12 +34,14 @@ public class SpringConfig implements AsyncConfigurer {
     }
 
     @Bean
-    public Jaxb2Marshaller marshaller() {
+    public Jaxb2Marshaller marshaller() throws Exception {
         Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
-//        marshaller.setContextPath("com.softClub.Test.client.gen");
-//        marshaller.setPackagesToScan("com.softClub.Test.client.gen");
+        marshaller.setMarshallerProperties(new HashMap<>() {{
+            put(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+        }});
         marshaller.setClassesToBeBound(com.softClub.Test.client.gen.GetCursOnDate.class,
                 com.softClub.Test.client.gen.GetCursOnDateResponse.class);
+        marshaller.afterPropertiesSet();
         return marshaller;
     }
 
