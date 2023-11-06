@@ -3,7 +3,6 @@ package com.softClub.Test.services;
 import com.softClub.Test.client.gen.GetCursOnDate;
 import com.softClub.Test.client.gen.GetCursOnDateResponse;
 import com.softClub.Test.client.gen.ObjectFactory;
-import org.springframework.oxm.Unmarshaller;
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
 import org.springframework.ws.soap.client.core.SoapActionCallback;
 
@@ -39,8 +38,8 @@ public class DailyCurrencyClient extends WebServiceGatewaySupport {
 
         GetCursOnDateResponse response = (GetCursOnDateResponse) getWebServiceTemplate()
                 .marshalSendAndReceive(request, action);
-
-        Unmarshaller unmarshaller = getWebServiceTemplate().getUnmarshaller();
+//
+//        Object any = response.getGetCursOnDateResult().getAny();
 
         return response;
     }

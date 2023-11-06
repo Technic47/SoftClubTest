@@ -24,6 +24,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+       <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -44,32 +48,6 @@
             <groupId>org.springframework.ws</groupId>
             <artifactId>spring-ws-core</artifactId>
         </dependency>
-        <dependency>
-            <groupId>javax.xml.bind</groupId>
-            <artifactId>jaxb-api</artifactId>
-            <version>2.4.0-b180830.0359</version>
-        </dependency>
-        <dependency>
-            <groupId>jakarta.xml.bind</groupId>
-            <artifactId>jakarta.xml.bind-api</artifactId>
-            <version>4.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>wsdl4j</groupId>
-            <artifactId>wsdl4j</artifactId>
-        </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.glassfish.jaxb</groupId>-->
-<!--            <artifactId>jaxb-runtime</artifactId>-->
-<!--            <version>3.0.0</version>-->
-<!--            <scope>runtime</scope>-->
-<!--        </dependency>-->
-        <dependency>
-            <groupId>com.sun.xml.bind</groupId>
-            <artifactId>jaxb-impl</artifactId>
-            <version>4.0.2</version>
-            <scope>runtime</scope>
-        </dependency>
     </dependencies>
 
     <build>
@@ -78,35 +56,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-
-<!--            <plugin>-->
-<!--                <groupId>com.sun.xml.ws</groupId>-->
-<!--                <artifactId>jaxws-maven-plugin</artifactId>-->
-<!--                <version>3.0.0</version>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <goals>-->
-<!--                            <goal>wsimport</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--                <configuration>-->
-<!--                    <packageName>com.example.demo.wsdl</packageName>-->
-<!--                    <wsdlUrls>-->
-<!--&lt;!&ndash;                        <wsdlUrl>${project.basedir}/src/main/resources/DailyInfo.wsdl</wsdlUrl>&ndash;&gt;-->
-<!--                        <wsdlUrl>http://www.w3.org/2001/XMLSchema.xsd</wsdlUrl>-->
-<!--                    </wsdlUrls>-->
-<!--                    <wsdlDirectory>${project.basedir}/src/main/resources/</wsdlDirectory>-->
-<!--                    <wsdlFiles>-->
-<!--                        <wsdlFile>DailyInfo.wsdl</wsdlFile>-->
-<!--                    </wsdlFiles>-->
-<!--                    <sourceDestDir>${sourcesDir}</sourceDestDir>-->
-<!--                    <destDir>${classesDir}</destDir>-->
-<!--                    <extension>true</extension>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-
-
             <plugin>
                 <groupId>org.jvnet.jaxb2.maven2</groupId>
                 <artifactId>maven-jaxb2-plugin</artifactId>
