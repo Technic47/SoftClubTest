@@ -1,5 +1,6 @@
 package com.softClub.Test.config;
 
+import com.softClub.Test.client.models.generated.ValuteData;
 import com.softClub.Test.services.DailyCurrencyClient;
 import jakarta.xml.bind.Marshaller;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -39,8 +40,12 @@ public class SpringConfig implements AsyncConfigurer {
         marshaller.setMarshallerProperties(new HashMap<>() {{
             put(Marshaller.JAXB_FORMATTED_OUTPUT, true);
         }});
+//        marshaller.setContextPaths(
+//                "com.softClub.Test.client.gen");
         marshaller.setClassesToBeBound(com.softClub.Test.client.gen.GetCursOnDate.class,
-                com.softClub.Test.client.gen.GetCursOnDateResponse.class);
+                com.softClub.Test.client.gen.GetCursOnDateResponse.class,
+                com.softClub.Test.client.models.generated.ValuteData.class,
+                ValuteData.ValuteCursOnDate.class);
         marshaller.afterPropertiesSet();
         return marshaller;
     }

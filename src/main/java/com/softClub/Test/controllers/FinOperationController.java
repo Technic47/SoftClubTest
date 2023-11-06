@@ -1,6 +1,7 @@
 package com.softClub.Test.controllers;
 
 import com.softClub.Test.client.gen.GetCursOnDateResponse;
+import com.softClub.Test.client.models.generated.ValuteData;
 import com.softClub.Test.models.FinOperation;
 import com.softClub.Test.models.FinOperationDTO;
 import com.softClub.Test.models.FinOperationDTOResponse;
@@ -53,10 +54,12 @@ public class FinOperationController {
     }
 
     @GetMapping("/update")
-    public ResponseEntity<?> updateCurrencies(){
+    public ResponseEntity<?> updateCurrencies() {
         GetCursOnDateResponse response = client.getCursOnDate(LocalDateTime.now());
         GetCursOnDateResponse.GetCursOnDateResult result = response.getGetCursOnDateResult();
-        System.out.println(result.getAny());
+        Object any = result.getAny();
+        ValuteData values = (ValuteData) any;
+        System.out.println(any);
         return ResponseEntity.ok("Request is sent.");
     }
 }
