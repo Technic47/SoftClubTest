@@ -1,14 +1,17 @@
 package com.softClub.Test.models;
 
+import com.softClub.Test.models.dto.FinOperationDTO;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.validation.constraints.Size;
 
 import java.math.BigDecimal;
-import java.math.BigInteger;
+import java.math.RoundingMode;
 import java.time.LocalDateTime;
+import java.util.Objects;
 
+/**
+ * Entity for incoming operations storing.
+ */
 @Entity
 public class FinOperation extends AbstractEntity {
     private LocalDateTime dateTime;
@@ -18,17 +21,14 @@ public class FinOperation extends AbstractEntity {
     public FinOperation() {
     }
 
-    public FinOperation(Long id, LocalDateTime dateTime, String description, BigDecimal sum) {
-        this.id = id;
-        this.dateTime = dateTime;
-        this.description = description;
-        this.sum = sum;
-    }
-
-    public FinOperation(FinOperationDTO dto){
-        this.dateTime = LocalDateTime.now();
+    public FinOperation(FinOperationDTO dto) {
+        LocalDateTime dtoDateTime = dto.getDateTime();
+        this.dateTime = Objects.requireNonNullElseGet(dtoDateTime, LocalDateTime::now);
         this.description = dto.getDescription();
-        this.sum = new BigDecimal(dto.getSum());
+        if (dto.getSum() == null) {
+            throw new IllegalArgumentException("Argument 'sum' is null!");
+        }
+        this.sum = new BigDecimal(dto.getSum()).setScale(7, RoundingMode.HALF_UP);
     }
 
     public LocalDateTime getDateTime() {

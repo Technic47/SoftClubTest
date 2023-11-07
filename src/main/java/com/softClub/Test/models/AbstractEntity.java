@@ -5,6 +5,9 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
 
+/**
+ * Root entity with id field.
+ */
 @MappedSuperclass
 public abstract class AbstractEntity {
     @Id

@@ -1,21 +1,19 @@
-package com.softClub.Test.services;
+package com.softClub.Test.webclient;
 
-import jakarta.xml.soap.MessageFactory;
 import jakarta.xml.soap.SOAPBody;
 import jakarta.xml.soap.SOAPMessage;
 import org.springframework.ws.client.WebServiceClientException;
 import org.springframework.ws.client.support.interceptor.ClientInterceptor;
 import org.springframework.ws.context.MessageContext;
 import org.springframework.ws.soap.saaj.SaajSoapMessage;
-import org.springframework.ws.soap.saaj.SaajSoapMessageFactory;
-import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
 import java.io.OutputStream;
 
+/**
+ * Interceptor for collecting ValuteCursOnDate part of server response.
+ */
 public class ResponseInterceptor implements ClientInterceptor {
     private final DailyCurrencyClient client;
 
@@ -38,6 +36,9 @@ public class ResponseInterceptor implements ClientInterceptor {
         return false;
     }
 
+    /**
+     * Search in SoapBody ValuteCursOnDate attribute and send it`s content to DailyCurrencyClient.
+     */
     @Override
     public void afterCompletion(MessageContext messageContext, Exception e) throws WebServiceClientException {
         try (OutputStream s = new ByteArrayOutputStream()) {

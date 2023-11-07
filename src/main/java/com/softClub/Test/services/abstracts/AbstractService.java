@@ -1,5 +1,6 @@
 package com.softClub.Test.services.abstracts;
 
+import com.softClub.Test.exceptionhendlers.ResourceNotFoundException;
 import com.softClub.Test.models.AbstractEntity;
 import com.softClub.Test.repositories.AbstractRepository;
 
@@ -7,7 +8,11 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
-
+/**
+ * Service with main methods for entityes.
+ * @param <E> Entity classes.
+ * @param <R> repository classes.
+ */
 public abstract class AbstractService<E extends AbstractEntity,
         R extends AbstractRepository<E>>
         implements CommonService<E> {
@@ -29,7 +34,7 @@ public abstract class AbstractService<E extends AbstractEntity,
     public E getById(Long id) {
         Optional<E> byId = repository.findById(id);
         if (byId.isEmpty()) {
-            throw new RuntimeException("Record with id: " + id + " not found");
+            throw new ResourceNotFoundException(id);
         } else return byId.get();
     }
 
@@ -43,7 +48,7 @@ public abstract class AbstractService<E extends AbstractEntity,
 
     public void deleteById(Long id) {
         if (!existById(id)) {
-            throw new RuntimeException("Record with id: " + id + " not found");
+            throw new ResourceNotFoundException(id);
         } else repository.deleteById(id);
     }
 }

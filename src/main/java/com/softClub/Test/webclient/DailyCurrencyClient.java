@@ -1,4 +1,4 @@
-package com.softClub.Test.services;
+package com.softClub.Test.webclient;
 
 import com.softClub.Test.client.gen.GetCursOnDate;
 import com.softClub.Test.client.gen.GetCursOnDateResponse;
@@ -18,21 +18,47 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Client for connecting to SOAP service.
+ */
 public class DailyCurrencyClient extends WebServiceGatewaySupport {
     private NodeList nodes;
 
-    public List<ValuteData.ValuteCursOnDate> getCursOnDate(LocalDateTime timeStamp){
+    /**
+     * Main procedure for sending request and consuming response.
+     * @param timeStamp argument for GetCursOnDate service.
+     * @return List ValuteCursOnDate objects.
+     */
+    public List<ValuteData.ValuteCursOnDate> getCursOnDate(LocalDateTime timeStamp) {
+        GetCursOnDate request = constructRequest(timeStamp);
+
+        SoapActionCallback action = new SoapActionCallback("http://web.cbr.ru/GetCursOnDate");
+        getWebServiceTemplate().marshalSendAndReceive(request, action);
+
+        return formListOfData();
+    }
+
+    /**
+     * Request object constructor.
+     *
+     * @param timeStamp timestamp argument.
+     * @return GetCursOnDate object.
+     */
+    private GetCursOnDate constructRequest(LocalDateTime timeStamp) {
         GetCursOnDate request = new ObjectFactory().createGetCursOnDate();
         XMLGregorianCalendar calendar = DatatypeFactory
                 .newDefaultInstance()
                 .newXMLGregorianCalendar(timeStamp.toString());
         request.setOnDate(calendar);
+        return request;
+    }
 
-        SoapActionCallback action = new SoapActionCallback("http://web.cbr.ru/GetCursOnDate");
-        getWebServiceTemplate().marshalSendAndReceive(request, action);
-
+    /**
+     * Unmarshal Nodes to usefull data.
+     * @return List of ValuteCursOnDate objects.
+     */
+    private List<ValuteData.ValuteCursOnDate> formListOfData(){
         List<ValuteData.ValuteCursOnDate> list = new ArrayList<>();
-
         try {
             JAXBContext jc = JAXBContext.newInstance(ValuteData.ValuteCursOnDate.class);
             Unmarshaller u = jc.createUnmarshaller();
@@ -43,7 +69,6 @@ public class DailyCurrencyClient extends WebServiceGatewaySupport {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         return list;
     }
 

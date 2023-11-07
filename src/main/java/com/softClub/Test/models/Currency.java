@@ -4,6 +4,9 @@ import jakarta.persistence.Entity;
 
 import java.math.BigDecimal;
 
+/**
+ * Entity class for storing ValuteCursOnDate data.
+ */
 @Entity
 public class Currency extends AbstractEntity {
     protected String vname;

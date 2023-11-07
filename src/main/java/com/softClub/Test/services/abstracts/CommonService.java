@@ -12,10 +12,6 @@ public interface CommonService<E> {
 
     boolean existById(Long id);
 
-//    E update(Long id, E updateItem);
-//
-//    E update(E item, E updateItem);
-
     Collection<E> getAll();
 
     void deleteById(Long id);

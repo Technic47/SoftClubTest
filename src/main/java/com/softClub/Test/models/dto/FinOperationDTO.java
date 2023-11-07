@@ -1,30 +1,19 @@
-package com.softClub.Test.models;
+package com.softClub.Test.models.dto;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 import java.time.LocalDateTime;
 
-@JsonInclude(JsonInclude.Include.NON_NULL) //Hide null fields
-public class FinOperationDTOResponse {
-    private Long id;
+/**
+ *DTO for receiving info from clients.
+ */
+public class FinOperationDTO {
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime dateTime;
     private String description;
     private String sum;
-
-    public FinOperationDTOResponse(FinOperation operation) {
-        this.id = operation.getId();
-        this.dateTime = operation.getDateTime();
-        this.description = operation.getDescription();
-        this.sum = operation.getSum().toString();
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public LocalDateTime getDateTime() {
         return dateTime;
