@@ -45,14 +45,11 @@ public class ResponseInterceptor implements ClientInterceptor {
 
             message.writeTo(s);
 
-//            String response = s.toString();
-//            System.out.println("SOAP RESPONSE: " + response);
             SOAPMessage saajMessage = message.getSaajMessage();
             SOAPBody soapBody = saajMessage.getSOAPBody();
             NodeList valuteCursOnDate = soapBody.getElementsByTagName("ValuteCursOnDate");
 
             client.setNodes(valuteCursOnDate);
-
         } catch (Exception ex) {
             ex.printStackTrace();
         }

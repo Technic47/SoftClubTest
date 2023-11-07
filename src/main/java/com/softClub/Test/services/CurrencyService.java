@@ -5,9 +5,36 @@ import com.softClub.Test.repositories.CurrencyRepository;
 import com.softClub.Test.services.abstracts.AbstractService;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class CurrencyService extends AbstractService<Currency, CurrencyRepository> {
     public CurrencyService(CurrencyRepository repository) {
         super(repository);
+    }
+
+    public Currency findByVchCode(String VchCode) {
+        Optional<Currency> result = repository.findByVchCode(VchCode);
+        if (result.isEmpty()) {
+            throw new RuntimeException("Record with VchCode: " + VchCode + " not found");
+        } else return result.get();
+    }
+
+    public Currency update(Currency currency) {
+        synchronized (this) {
+            String vchCode = currency.getVchCode();
+            try {
+                Currency found = findByVchCode(vchCode);
+                found.setVcode(currency.getVcode());
+                found.setVchCode(currency.getVchCode());
+                found.setVcurs(currency.getVcurs());
+                found.setVname(currency.getVname());
+                found.setVnom(currency.getVnom());
+                found.setVunitRate(currency.getVunitRate());
+                return repository.save(found);
+            } catch (Exception e) {
+                return repository.save(currency);
+            }
+        }
     }
 }

@@ -21,7 +21,7 @@ import java.util.List;
 public class DailyCurrencyClient extends WebServiceGatewaySupport {
     private NodeList nodes;
 
-    public GetCursOnDateResponse getCursOnDate(LocalDateTime timeStamp) {
+    public List<ValuteData.ValuteCursOnDate> getCursOnDate(LocalDateTime timeStamp){
         GetCursOnDate request = new ObjectFactory().createGetCursOnDate();
         XMLGregorianCalendar calendar = DatatypeFactory
                 .newDefaultInstance()
@@ -31,12 +31,12 @@ public class DailyCurrencyClient extends WebServiceGatewaySupport {
         SoapActionCallback action = new SoapActionCallback("http://web.cbr.ru/GetCursOnDate");
         getWebServiceTemplate().marshalSendAndReceive(request, action);
 
-        try {
+        List<ValuteData.ValuteCursOnDate> list = new ArrayList<>();
 
+        try {
             JAXBContext jc = JAXBContext.newInstance(ValuteData.ValuteCursOnDate.class);
             Unmarshaller u = jc.createUnmarshaller();
 
-            List<ValuteData.ValuteCursOnDate> list = new ArrayList<>();
             for (int i = 0; i < nodes.getLength(); i++) {
                 list.add(u.unmarshal(nodes.item(i), ValuteData.ValuteCursOnDate.class).getValue());
             }
@@ -44,12 +44,7 @@ public class DailyCurrencyClient extends WebServiceGatewaySupport {
             e.printStackTrace();
         }
 
-        return (GetCursOnDateResponse) getWebServiceTemplate()
-                .marshalSendAndReceive(request, action);
-    }
-
-    public NodeList getNodes() {
-        return nodes;
+        return list;
     }
 
     public void setNodes(NodeList nodes) {

@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @RestController
 @RequestMapping("/operations")
@@ -55,11 +56,8 @@ public class FinOperationController {
 
     @GetMapping("/update")
     public ResponseEntity<?> updateCurrencies() {
-        GetCursOnDateResponse response = client.getCursOnDate(LocalDateTime.now());
-        GetCursOnDateResponse.GetCursOnDateResult result = response.getGetCursOnDateResult();
-        Object any = result.getAny();
-        ValuteData values = (ValuteData) any;
-        System.out.println(any.getClass().getSimpleName());
-        return ResponseEntity.ok("Request is sent.");
+        List<ValuteData.ValuteCursOnDate> response = client.getCursOnDate(LocalDateTime.now());
+
+        return ResponseEntity.ok(response);
     }
 }

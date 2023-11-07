@@ -3,7 +3,6 @@ package com.softClub.Test.services.abstracts;
 import com.softClub.Test.models.AbstractEntity;
 import com.softClub.Test.repositories.AbstractRepository;
 
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
@@ -11,8 +10,8 @@ import java.util.Optional;
 
 public abstract class AbstractService<E extends AbstractEntity,
         R extends AbstractRepository<E>>
-implements CommonService<E>{
-    private final R repository;
+        implements CommonService<E> {
+    protected final R repository;
 
 
     public AbstractService(R repository) {
@@ -23,7 +22,7 @@ implements CommonService<E>{
         return repository.save(entity);
     }
 
-    public List<E> saveAll(Collection<E> batch){
+    public List<E> saveAll(Collection<E> batch) {
         return repository.saveAll(batch);
     }
 

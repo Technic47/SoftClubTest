@@ -46,11 +46,7 @@ public class SpringConfig implements AsyncConfigurer {
         marshaller.setClassesToBeBound(com.softClub.Test.client.gen.GetCursOnDate.class,
                 com.softClub.Test.client.gen.GetCursOnDateResponse.class,
                 com.softClub.Test.client.models.generated.ValuteData.class,
-                com.softClub.Test.client.models.generated.ValuteData.ValuteCursOnDate.class,
-                com.softClub.Test.models.XMLparse.Result.class,
-                com.softClub.Test.models.XMLparse.Response.class,
-                com.softClub.Test.models.XMLparse.Currency.class,
-                com.softClub.Test.models.XMLparse.CurrencyData.class);
+                com.softClub.Test.client.models.generated.ValuteData.ValuteCursOnDate.class);
         marshaller.afterPropertiesSet();
         return marshaller;
     }
