@@ -3,6 +3,7 @@ package com.softClub.Test.models;
 import jakarta.persistence.Entity;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 /**
  * Entity class for storing ValuteCursOnDate data.
@@ -78,5 +79,18 @@ public class Currency extends AbstractEntity {
 
     public void setVunitRate(Double vunitRate) {
         this.vunitRate = vunitRate;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Currency)) return false;
+        Currency currency = (Currency) o;
+        return Objects.equals(vname, currency.vname) && Objects.equals(vnom, currency.vnom) && Objects.equals(vcurs, currency.vcurs) && Objects.equals(vcode, currency.vcode) && Objects.equals(vchCode, currency.vchCode) && Objects.equals(vunitRate, currency.vunitRate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(vname, vnom, vcurs, vcode, vchCode, vunitRate);
     }
 }

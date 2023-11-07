@@ -54,4 +54,18 @@ public class FinOperation extends AbstractEntity {
     public void setSum(BigDecimal sum) {
         this.sum = sum;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof FinOperation)) return false;
+        if (!super.equals(o)) return false;
+        FinOperation operation = (FinOperation) o;
+        return Objects.equals(dateTime, operation.dateTime) && Objects.equals(description, operation.description) && Objects.equals(sum, operation.sum);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), dateTime, description, sum);
+    }
 }

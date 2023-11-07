@@ -43,7 +43,6 @@ public class CurrencyService extends AbstractService<Currency, CurrencyRepositor
             try {
                 Currency found = findByVchCode(vchCode);
                 found.setVcode(currency.getVcode());
-                found.setVchCode(currency.getVchCode());
                 found.setVcurs(currency.getVcurs());
                 found.setVname(currency.getVname());
                 found.setVnom(currency.getVnom());
