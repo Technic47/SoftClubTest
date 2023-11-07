@@ -1,7 +1,7 @@
 package com.softClub.Test.config;
 
-import com.softClub.Test.client.models.generated.ValuteData;
 import com.softClub.Test.services.DailyCurrencyClient;
+import com.softClub.Test.services.ResponseInterceptor;
 import jakarta.xml.bind.Marshaller;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
@@ -14,6 +14,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.ws.client.support.interceptor.ClientInterceptor;
 
 import java.util.HashMap;
 import java.util.concurrent.Executor;
@@ -45,7 +46,11 @@ public class SpringConfig implements AsyncConfigurer {
         marshaller.setClassesToBeBound(com.softClub.Test.client.gen.GetCursOnDate.class,
                 com.softClub.Test.client.gen.GetCursOnDateResponse.class,
                 com.softClub.Test.client.models.generated.ValuteData.class,
-                ValuteData.ValuteCursOnDate.class);
+                com.softClub.Test.client.models.generated.ValuteData.ValuteCursOnDate.class,
+                com.softClub.Test.models.XMLparse.Result.class,
+                com.softClub.Test.models.XMLparse.Response.class,
+                com.softClub.Test.models.XMLparse.Currency.class,
+                com.softClub.Test.models.XMLparse.CurrencyData.class);
         marshaller.afterPropertiesSet();
         return marshaller;
     }
@@ -57,6 +62,7 @@ public class SpringConfig implements AsyncConfigurer {
         client.setDefaultUri("https://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx");
         client.setMarshaller(marshaller);
         client.setUnmarshaller(marshaller);
+        client.setInterceptors(new ClientInterceptor[]{new ResponseInterceptor(client)});
         return client;
     }
 }

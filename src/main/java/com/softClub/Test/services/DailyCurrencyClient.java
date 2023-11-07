@@ -3,14 +3,24 @@ package com.softClub.Test.services;
 import com.softClub.Test.client.gen.GetCursOnDate;
 import com.softClub.Test.client.gen.GetCursOnDateResponse;
 import com.softClub.Test.client.gen.ObjectFactory;
+import com.softClub.Test.client.models.generated.ValuteData;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.Unmarshaller;
+import org.springframework.oxm.jaxb.Jaxb2Marshaller;
+import org.springframework.ws.client.core.WebServiceTemplate;
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
 import org.springframework.ws.soap.client.core.SoapActionCallback;
+import org.w3c.dom.NodeList;
 
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DailyCurrencyClient extends WebServiceGatewaySupport {
+    private NodeList nodes;
+
     public GetCursOnDateResponse getCursOnDate(LocalDateTime timeStamp) {
         GetCursOnDate request = new ObjectFactory().createGetCursOnDate();
         XMLGregorianCalendar calendar = DatatypeFactory
@@ -18,29 +28,31 @@ public class DailyCurrencyClient extends WebServiceGatewaySupport {
                 .newXMLGregorianCalendar(timeStamp.toString());
         request.setOnDate(calendar);
 
-//        StringWriter stringWriter = new StringWriter();
-//
-//        try {
-//            Jaxb2Marshaller springMarshaller = (Jaxb2Marshaller) getWebServiceTemplate().getMarshaller();
-//            Result result = new StreamResult(stringWriter);
-//            springMarshaller.marshal(request, result);
-//
-//            System.out.println(stringWriter);
-//            System.out.println();
-//            String record = BEFORE + stringWriter + AFTER;
-//            System.out.println(record);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-
-//        String defaultUri = getDefaultUri();
         SoapActionCallback action = new SoapActionCallback("http://web.cbr.ru/GetCursOnDate");
+        getWebServiceTemplate().marshalSendAndReceive(request, action);
 
-        GetCursOnDateResponse response = (GetCursOnDateResponse) getWebServiceTemplate()
+        try {
+
+            JAXBContext jc = JAXBContext.newInstance(ValuteData.ValuteCursOnDate.class);
+            Unmarshaller u = jc.createUnmarshaller();
+
+            List<ValuteData.ValuteCursOnDate> list = new ArrayList<>();
+            for (int i = 0; i < nodes.getLength(); i++) {
+                list.add(u.unmarshal(nodes.item(i), ValuteData.ValuteCursOnDate.class).getValue());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return (GetCursOnDateResponse) getWebServiceTemplate()
                 .marshalSendAndReceive(request, action);
-//
-//        Object any = response.getGetCursOnDateResult().getAny();
+    }
 
-        return response;
+    public NodeList getNodes() {
+        return nodes;
+    }
+
+    public void setNodes(NodeList nodes) {
+        this.nodes = nodes;
     }
 }

@@ -59,7 +59,7 @@ public class FinOperationController {
         GetCursOnDateResponse.GetCursOnDateResult result = response.getGetCursOnDateResult();
         Object any = result.getAny();
         ValuteData values = (ValuteData) any;
-        System.out.println(any);
+        System.out.println(any.getClass().getSimpleName());
         return ResponseEntity.ok("Request is sent.");
     }
 }
