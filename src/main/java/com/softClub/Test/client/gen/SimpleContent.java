@@ -13,19 +13,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType&gt;
- *   &lt;complexContent&gt;
- *     &lt;extension base="{http://www.w3.org/2001/XMLSchema}annotated"&gt;
- *       &lt;choice&gt;
- *         &lt;element name="restriction" type="{http://www.w3.org/2001/XMLSchema}simpleRestrictionType"/&gt;
- *         &lt;element name="extension" type="{http://www.w3.org/2001/XMLSchema}simpleExtensionType"/&gt;
- *       &lt;/choice&gt;
- *       &lt;anyAttribute processContents='lax' namespace='##other'/&gt;
- *     &lt;/extension&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType>
+ *   <complexContent>
+ *     <extension base="{http://www.w3.org/2001/XMLSchema}annotated">
+ *       <choice>
+ *         <element name="restriction" type="{http://www.w3.org/2001/XMLSchema}simpleRestrictionType"/>
+ *         <element name="extension" type="{http://www.w3.org/2001/XMLSchema}simpleExtensionType"/>
+ *       </choice>
+ *       <anyAttribute processContents='lax' namespace='##other'/>
+ *     </extension>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */

@@ -4,6 +4,7 @@ package com.softClub.Test.client.gen;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.namespace.QName;
 import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -15,7 +16,6 @@ import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
 import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import javax.xml.namespace.QName;
 
 
 /**
@@ -27,18 +27,18 @@ import javax.xml.namespace.QName;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType name="group"&gt;
- *   &lt;complexContent&gt;
- *     &lt;extension base="{http://www.w3.org/2001/XMLSchema}annotated"&gt;
- *       &lt;group ref="{http://www.w3.org/2001/XMLSchema}particle" maxOccurs="unbounded" minOccurs="0"/&gt;
- *       &lt;attGroup ref="{http://www.w3.org/2001/XMLSchema}occurs"/&gt;
- *       &lt;attGroup ref="{http://www.w3.org/2001/XMLSchema}defRef"/&gt;
- *       &lt;anyAttribute processContents='lax' namespace='##other'/&gt;
- *     &lt;/extension&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType name="group">
+ *   <complexContent>
+ *     <extension base="{http://www.w3.org/2001/XMLSchema}annotated">
+ *       <group ref="{http://www.w3.org/2001/XMLSchema}particle" maxOccurs="unbounded" minOccurs="0"/>
+ *       <attGroup ref="{http://www.w3.org/2001/XMLSchema}defRef"/>
+ *       <attGroup ref="{http://www.w3.org/2001/XMLSchema}occurs"/>
+ *       <anyAttribute processContents='lax' namespace='##other'/>
+ *     </extension>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -63,18 +63,18 @@ public abstract class Group
         @XmlElementRef(name = "any", namespace = "http://www.w3.org/2001/XMLSchema", type = Any.class, required = false)
     })
     protected List<Object> particle;
-    @XmlAttribute(name = "minOccurs")
-    @XmlSchemaType(name = "nonNegativeInteger")
-    protected BigInteger minOccurs;
-    @XmlAttribute(name = "maxOccurs")
-    @XmlSchemaType(name = "allNNI")
-    protected String maxOccurs;
     @XmlAttribute(name = "name")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NCName")
     protected String name;
     @XmlAttribute(name = "ref")
     protected QName ref;
+    @XmlAttribute(name = "minOccurs")
+    @XmlSchemaType(name = "nonNegativeInteger")
+    protected BigInteger minOccurs;
+    @XmlAttribute(name = "maxOccurs")
+    @XmlSchemaType(name = "allNNI")
+    protected String maxOccurs;
 
     /**
      * Gets the value of the particle property.
@@ -82,8 +82,8 @@ public abstract class Group
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the particle property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the particle property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -102,12 +102,62 @@ public abstract class Group
      * {@link JAXBElement }{@code <}{@link LocalElement }{@code >}
      * 
      * 
+     * @return
+     *     The value of the particle property.
      */
     public List<Object> getParticle() {
         if (particle == null) {
-            particle = new ArrayList<Object>();
+            particle = new ArrayList<>();
         }
         return this.particle;
+    }
+
+    /**
+     * Gets the value of the name property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * Sets the value of the name property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setName(String value) {
+        this.name = value;
+    }
+
+    /**
+     * Gets the value of the ref property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link QName }
+     *     
+     */
+    public QName getRef() {
+        return ref;
+    }
+
+    /**
+     * Sets the value of the ref property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link QName }
+     *     
+     */
+    public void setRef(QName value) {
+        this.ref = value;
     }
 
     /**
@@ -164,54 +214,6 @@ public abstract class Group
      */
     public void setMaxOccurs(String value) {
         this.maxOccurs = value;
-    }
-
-    /**
-     * Gets the value of the name property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * Sets the value of the name property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setName(String value) {
-        this.name = value;
-    }
-
-    /**
-     * Gets the value of the ref property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link QName }
-     *     
-     */
-    public QName getRef() {
-        return ref;
-    }
-
-    /**
-     * Sets the value of the ref property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link QName }
-     *     
-     */
-    public void setRef(QName value) {
-        this.ref = value;
     }
 
 }

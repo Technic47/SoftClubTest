@@ -8,9 +8,12 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+
+import static com.softClub.Test.config.SpringConfig.PRECISION;
 
 /**
  * Service for calculating reports for specified currency VchCode.
@@ -47,7 +50,7 @@ public class ReportService {
         for (int i = 0; i < operations.size(); i++) {
             FinOperation operation = operations.get(i);
             BigDecimal sum = operation.getSum();
-            sum = sum.multiply(new BigDecimal(vunitRate));
+            sum = sum.multiply(new BigDecimal(vunitRate)).setScale(PRECISION, RoundingMode.HALF_UP);
             operation.setSum(sum);
             dtoResponses[i] = new FinOperationDTOResponse(operation);
         }

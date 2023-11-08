@@ -3,6 +3,7 @@ package com.softClub.Test.client.gen;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.namespace.QName;
 import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -12,7 +13,6 @@ import jakarta.xml.bind.annotation.XmlElementRef;
 import jakarta.xml.bind.annotation.XmlElementRefs;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
-import javax.xml.namespace.QName;
 
 
 /**
@@ -25,17 +25,17 @@ import javax.xml.namespace.QName;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType&gt;
- *   &lt;complexContent&gt;
- *     &lt;extension base="{http://www.w3.org/2001/XMLSchema}annotated"&gt;
- *       &lt;group ref="{http://www.w3.org/2001/XMLSchema}simpleRestrictionModel"/&gt;
- *       &lt;attribute name="base" type="{http://www.w3.org/2001/XMLSchema}QName" /&gt;
- *       &lt;anyAttribute processContents='lax' namespace='##other'/&gt;
- *     &lt;/extension&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType>
+ *   <complexContent>
+ *     <extension base="{http://www.w3.org/2001/XMLSchema}annotated">
+ *       <group ref="{http://www.w3.org/2001/XMLSchema}simpleRestrictionModel"/>
+ *       <attribute name="base" type="{http://www.w3.org/2001/XMLSchema}QName" />
+ *       <anyAttribute processContents='lax' namespace='##other'/>
+ *     </extension>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -99,8 +99,8 @@ public class Restriction
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the facets property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the facets property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -125,10 +125,12 @@ public class Restriction
      * {@link JAXBElement }{@code <}{@link NumFacet }{@code >}
      * 
      * 
+     * @return
+     *     The value of the facets property.
      */
     public List<Object> getFacets() {
         if (facets == null) {
-            facets = new ArrayList<Object>();
+            facets = new ArrayList<>();
         }
         return this.facets;
     }

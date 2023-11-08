@@ -3,13 +3,13 @@ package com.softClub.Test.client.gen;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.namespace.QName;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
-import javax.xml.namespace.QName;
 
 
 /**
@@ -22,23 +22,23 @@ import javax.xml.namespace.QName;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType&gt;
- *   &lt;complexContent&gt;
- *     &lt;extension base="{http://www.w3.org/2001/XMLSchema}annotated"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="simpleType" type="{http://www.w3.org/2001/XMLSchema}localSimpleType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="memberTypes"&gt;
- *         &lt;simpleType&gt;
- *           &lt;list itemType="{http://www.w3.org/2001/XMLSchema}QName" /&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *       &lt;anyAttribute processContents='lax' namespace='##other'/&gt;
- *     &lt;/extension&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType>
+ *   <complexContent>
+ *     <extension base="{http://www.w3.org/2001/XMLSchema}annotated">
+ *       <sequence>
+ *         <element name="simpleType" type="{http://www.w3.org/2001/XMLSchema}localSimpleType" maxOccurs="unbounded" minOccurs="0"/>
+ *       </sequence>
+ *       <attribute name="memberTypes">
+ *         <simpleType>
+ *           <list itemType="{http://www.w3.org/2001/XMLSchema}QName" />
+ *         </simpleType>
+ *       </attribute>
+ *       <anyAttribute processContents='lax' namespace='##other'/>
+ *     </extension>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -62,8 +62,8 @@ public class Union
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the simpleType property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the simpleType property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -77,10 +77,12 @@ public class Union
      * {@link LocalSimpleType }
      * 
      * 
+     * @return
+     *     The value of the simpleType property.
      */
     public List<LocalSimpleType> getSimpleType() {
         if (simpleType == null) {
-            simpleType = new ArrayList<LocalSimpleType>();
+            simpleType = new ArrayList<>();
         }
         return this.simpleType;
     }
@@ -91,8 +93,8 @@ public class Union
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the memberTypes property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the memberTypes property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -106,10 +108,12 @@ public class Union
      * {@link QName }
      * 
      * 
+     * @return
+     *     The value of the memberTypes property.
      */
     public List<QName> getMemberTypes() {
         if (memberTypes == null) {
-            memberTypes = new ArrayList<QName>();
+            memberTypes = new ArrayList<>();
         }
         return this.memberTypes;
     }

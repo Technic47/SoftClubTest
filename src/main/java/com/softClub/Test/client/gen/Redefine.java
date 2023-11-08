@@ -21,21 +21,21 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType&gt;
- *   &lt;complexContent&gt;
- *     &lt;extension base="{http://www.w3.org/2001/XMLSchema}openAttrs"&gt;
- *       &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
- *         &lt;element ref="{http://www.w3.org/2001/XMLSchema}annotation"/&gt;
- *         &lt;group ref="{http://www.w3.org/2001/XMLSchema}redefinable"/&gt;
- *       &lt;/choice&gt;
- *       &lt;attribute name="schemaLocation" use="required" type="{http://www.w3.org/2001/XMLSchema}anyURI" /&gt;
- *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" /&gt;
- *       &lt;anyAttribute processContents='lax' namespace='##other'/&gt;
- *     &lt;/extension&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType>
+ *   <complexContent>
+ *     <extension base="{http://www.w3.org/2001/XMLSchema}openAttrs">
+ *       <choice maxOccurs="unbounded" minOccurs="0">
+ *         <element ref="{http://www.w3.org/2001/XMLSchema}annotation"/>
+ *         <group ref="{http://www.w3.org/2001/XMLSchema}redefinable"/>
+ *       </choice>
+ *       <attribute name="schemaLocation" use="required" type="{http://www.w3.org/2001/XMLSchema}anyURI" />
+ *       <attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" />
+ *       <anyAttribute processContents='lax' namespace='##other'/>
+ *     </extension>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -71,8 +71,8 @@ public class Redefine
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the annotationOrSimpleTypeOrComplexType property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the annotationOrSimpleTypeOrComplexType property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -90,10 +90,12 @@ public class Redefine
      * {@link TopLevelSimpleType }
      * 
      * 
+     * @return
+     *     The value of the annotationOrSimpleTypeOrComplexType property.
      */
     public List<OpenAttrs> getAnnotationOrSimpleTypeOrComplexType() {
         if (annotationOrSimpleTypeOrComplexType == null) {
-            annotationOrSimpleTypeOrComplexType = new ArrayList<OpenAttrs>();
+            annotationOrSimpleTypeOrComplexType = new ArrayList<>();
         }
         return this.annotationOrSimpleTypeOrComplexType;
     }

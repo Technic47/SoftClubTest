@@ -16,18 +16,18 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType&gt;
- *   &lt;complexContent&gt;
- *     &lt;extension base="{http://www.w3.org/2001/XMLSchema}annotated"&gt;
- *       &lt;attribute name="name" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
- *       &lt;attribute name="public" type="{http://www.w3.org/2001/XMLSchema}public" /&gt;
- *       &lt;attribute name="system" type="{http://www.w3.org/2001/XMLSchema}anyURI" /&gt;
- *       &lt;anyAttribute processContents='lax' namespace='##other'/&gt;
- *     &lt;/extension&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType>
+ *   <complexContent>
+ *     <extension base="{http://www.w3.org/2001/XMLSchema}annotated">
+ *       <attribute name="name" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
+ *       <attribute name="public" type="{http://www.w3.org/2001/XMLSchema}public" />
+ *       <attribute name="system" type="{http://www.w3.org/2001/XMLSchema}anyURI" />
+ *       <anyAttribute processContents='lax' namespace='##other'/>
+ *     </extension>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */

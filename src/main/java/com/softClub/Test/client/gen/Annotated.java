@@ -22,19 +22,19 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType name="annotated"&gt;
- *   &lt;complexContent&gt;
- *     &lt;extension base="{http://www.w3.org/2001/XMLSchema}openAttrs"&gt;
- *       &lt;sequence&gt;
- *         &lt;element ref="{http://www.w3.org/2001/XMLSchema}annotation" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" /&gt;
- *       &lt;anyAttribute processContents='lax' namespace='##other'/&gt;
- *     &lt;/extension&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType name="annotated">
+ *   <complexContent>
+ *     <extension base="{http://www.w3.org/2001/XMLSchema}openAttrs">
+ *       <sequence>
+ *         <element ref="{http://www.w3.org/2001/XMLSchema}annotation" minOccurs="0"/>
+ *       </sequence>
+ *       <attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" />
+ *       <anyAttribute processContents='lax' namespace='##other'/>
+ *     </extension>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */

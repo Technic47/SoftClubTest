@@ -4,6 +4,7 @@ import com.softClub.Test.client.models.generated.ValuteData;
 import com.softClub.Test.models.FinOperation;
 import com.softClub.Test.models.dto.FinOperationDTO;
 import com.softClub.Test.models.dto.FinOperationDTOResponse;
+import com.softClub.Test.services.CurrencyUpdateService;
 import com.softClub.Test.webclient.DailyCurrencyClient;
 import com.softClub.Test.services.FinOperationService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -24,9 +25,9 @@ import java.util.List;
 @RequestMapping("/operations")
 public class FinOperationController {
     private final FinOperationService service;
-    private final DailyCurrencyClient client;
+    private final CurrencyUpdateService client;
 
-    public FinOperationController(FinOperationService service, DailyCurrencyClient client) {
+    public FinOperationController(FinOperationService service, CurrencyUpdateService client) {
         this.service = service;
         this.client = client;
     }
@@ -66,7 +67,7 @@ public class FinOperationController {
                     content = @Content)})
     @GetMapping("/update")
     public ResponseEntity<?> updateCurrencies() {
-        List<ValuteData.ValuteCursOnDate> response = client.getCursOnDate(LocalDateTime.now());
+        List<ValuteData.ValuteCursOnDate> response = client.updateAndGet();
 
         return ResponseEntity.ok(response);
     }

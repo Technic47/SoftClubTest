@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "55ddcdee-8202-474a-8b18-8ff077b53709",
+		"name": "SoftClubTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25312518"
+	},
+	"item": [
+		{
+			"name": "Save Operation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"TestOperation\",\r\n    \"sum\": \"1234567.77555646\",\r\n    \"dateTime\" : \"2022-05-12 00:06:05\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/operations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"operations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Operation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/operations/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"operations",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml; charset=utf-8",
+						"type": "text"
+					},
+					{
+						"key": "SOAPAction",
+						"value": "http://web.cbr.ru/GetCursOnDate",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n    <soap:Body>\r\n        <GetCursOnDate xmlns=\"http://web.cbr.ru/\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\">\r\n            <On_date>2023-11-06T10:48:55.966386600</On_date>\r\n        </GetCursOnDate>\r\n    </soap:Body>\r\n</soap:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx",
+					"protocol": "http",
+					"host": [
+						"www",
+						"cbr",
+						"ru"
+					],
+					"path": [
+						"DailyInfoWebServ",
+						"DailyInfo.asmx"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Currency Update",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/operations/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"operations",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get report",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"vchCode\" : \"EUR\",\r\n    \"startDateTime\" : \"2022-05-12 00:00:00\",\r\n    \"finishDateTime\" : \"2022-06-12 00:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/report",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"report"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

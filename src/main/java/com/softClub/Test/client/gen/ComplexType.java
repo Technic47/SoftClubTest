@@ -20,21 +20,21 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType name="complexType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;extension base="{http://www.w3.org/2001/XMLSchema}annotated"&gt;
- *       &lt;group ref="{http://www.w3.org/2001/XMLSchema}complexTypeModel"/&gt;
- *       &lt;attribute name="name" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
- *       &lt;attribute name="mixed" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
- *       &lt;attribute name="abstract" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
- *       &lt;attribute name="final" type="{http://www.w3.org/2001/XMLSchema}derivationSet" /&gt;
- *       &lt;attribute name="block" type="{http://www.w3.org/2001/XMLSchema}derivationSet" /&gt;
- *       &lt;anyAttribute processContents='lax' namespace='##other'/&gt;
- *     &lt;/extension&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType name="complexType">
+ *   <complexContent>
+ *     <extension base="{http://www.w3.org/2001/XMLSchema}annotated">
+ *       <group ref="{http://www.w3.org/2001/XMLSchema}complexTypeModel"/>
+ *       <attribute name="name" type="{http://www.w3.org/2001/XMLSchema}NCName" />
+ *       <attribute name="mixed" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
+ *       <attribute name="abstract" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
+ *       <attribute name="final" type="{http://www.w3.org/2001/XMLSchema}derivationSet" />
+ *       <attribute name="block" type="{http://www.w3.org/2001/XMLSchema}derivationSet" />
+ *       <anyAttribute processContents='lax' namespace='##other'/>
+ *     </extension>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -234,8 +234,8 @@ public abstract class ComplexType
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the attributeOrAttributeGroup property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the attributeOrAttributeGroup property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -250,10 +250,12 @@ public abstract class ComplexType
      * {@link AttributeGroupRef }
      * 
      * 
+     * @return
+     *     The value of the attributeOrAttributeGroup property.
      */
     public List<Annotated> getAttributeOrAttributeGroup() {
         if (attributeOrAttributeGroup == null) {
-            attributeOrAttributeGroup = new ArrayList<Annotated>();
+            attributeOrAttributeGroup = new ArrayList<>();
         }
         return this.attributeOrAttributeGroup;
     }
@@ -368,8 +370,8 @@ public abstract class ComplexType
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the final property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the final property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -383,10 +385,12 @@ public abstract class ComplexType
      * {@link String }
      * 
      * 
+     * @return
+     *     The value of the final property.
      */
     public List<String> getFinal() {
         if (_final == null) {
-            _final = new ArrayList<String>();
+            _final = new ArrayList<>();
         }
         return this._final;
     }
@@ -397,8 +401,8 @@ public abstract class ComplexType
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the block property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the block property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -412,10 +416,12 @@ public abstract class ComplexType
      * {@link String }
      * 
      * 
+     * @return
+     *     The value of the block property.
      */
     public List<String> getBlock() {
         if (block == null) {
-            block = new ArrayList<String>();
+            block = new ArrayList<>();
         }
         return this.block;
     }

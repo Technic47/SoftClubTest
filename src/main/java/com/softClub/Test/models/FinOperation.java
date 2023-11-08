@@ -1,13 +1,15 @@
 package com.softClub.Test.models;
 
 import com.softClub.Test.models.dto.FinOperationDTO;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.validation.constraints.Size;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.time.LocalDateTime;
 import java.util.Objects;
+
+import static com.softClub.Test.config.SpringConfig.PRECISION;
 
 /**
  * Entity for incoming operations storing.
@@ -16,6 +18,7 @@ import java.util.Objects;
 public class FinOperation extends AbstractEntity {
     private LocalDateTime dateTime;
     private String description;
+    @Column(scale = 10, precision = 30)
     private BigDecimal sum;
 
     public FinOperation() {
@@ -28,7 +31,7 @@ public class FinOperation extends AbstractEntity {
         if (dto.getSum() == null) {
             throw new IllegalArgumentException("Argument 'sum' is null!");
         }
-        this.sum = new BigDecimal(dto.getSum()).setScale(7, RoundingMode.HALF_UP);
+        this.sum = new BigDecimal(dto.getSum()).setScale(PRECISION, RoundingMode.HALF_UP).stripTrailingZeros();
     }
 
     public LocalDateTime getDateTime() {
@@ -52,7 +55,7 @@ public class FinOperation extends AbstractEntity {
     }
 
     public void setSum(BigDecimal sum) {
-        this.sum = sum;
+        this.sum = sum.setScale(PRECISION, RoundingMode.HALF_UP);
     }
 
     @Override

@@ -10,14 +10,14 @@ import jakarta.xml.bind.annotation.XmlType;
  * <p>Java class for reducedDerivationControl.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <pre>
- * &lt;simpleType name="reducedDerivationControl"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}derivationControl"&gt;
- *     &lt;enumeration value="extension"/&gt;
- *     &lt;enumeration value="restriction"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
- * </pre>
+ * <pre>{@code
+ * <simpleType name="reducedDerivationControl">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}derivationControl">
+ *     <enumeration value="extension"/>
+ *     <enumeration value="restriction"/>
+ *   </restriction>
+ * </simpleType>
+ * }</pre>
  * 
  */
 @XmlType(name = "reducedDerivationControl", namespace = "http://www.w3.org/2001/XMLSchema")

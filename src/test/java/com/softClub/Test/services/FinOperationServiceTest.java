@@ -1,7 +1,7 @@
 package com.softClub.Test.services;
 
 import com.softClub.Test.exceptionhendlers.ResourceNotFoundException;
-import com.softClub.Test.models.AbstractModelsTests;
+import com.softClub.Test.models.AbstractModelsTest;
 import com.softClub.Test.models.FinOperation;
 import com.softClub.Test.repositories.FinOperationRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.*;
 
-class FinOperationServiceTest extends AbstractModelsTests {
+class FinOperationServiceTest extends AbstractModelsTest {
     private FinOperationRepository repository;
     private FinOperationService service;
 

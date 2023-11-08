@@ -22,7 +22,7 @@ public class FinOperationDTOResponse {
         this.id = operation.getId();
         this.dateTime = operation.getDateTime();
         this.description = operation.getDescription();
-        this.sum = operation.getSum().setScale(7, RoundingMode.HALF_UP).toString();
+        this.sum = operation.getSum().stripTrailingZeros().toString();
     }
 
     public Long getId() {

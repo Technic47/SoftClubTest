@@ -18,25 +18,25 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType name="wildcard"&gt;
- *   &lt;complexContent&gt;
- *     &lt;extension base="{http://www.w3.org/2001/XMLSchema}annotated"&gt;
- *       &lt;attribute name="namespace" type="{http://www.w3.org/2001/XMLSchema}namespaceList" default="##any" /&gt;
- *       &lt;attribute name="processContents" default="strict"&gt;
- *         &lt;simpleType&gt;
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *             &lt;enumeration value="skip"/&gt;
- *             &lt;enumeration value="lax"/&gt;
- *             &lt;enumeration value="strict"/&gt;
- *           &lt;/restriction&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *       &lt;anyAttribute processContents='lax' namespace='##other'/&gt;
- *     &lt;/extension&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType name="wildcard">
+ *   <complexContent>
+ *     <extension base="{http://www.w3.org/2001/XMLSchema}annotated">
+ *       <attribute name="namespace" type="{http://www.w3.org/2001/XMLSchema}namespaceList" default="##any" />
+ *       <attribute name="processContents" default="strict">
+ *         <simpleType>
+ *           <restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *             <enumeration value="skip"/>
+ *             <enumeration value="lax"/>
+ *             <enumeration value="strict"/>
+ *           </restriction>
+ *         </simpleType>
+ *       </attribute>
+ *       <anyAttribute processContents='lax' namespace='##other'/>
+ *     </extension>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -62,8 +62,8 @@ public class Wildcard
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the namespace property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the namespace property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -77,10 +77,12 @@ public class Wildcard
      * {@link String }
      * 
      * 
+     * @return
+     *     The value of the namespace property.
      */
     public List<String> getNamespace() {
         if (namespace == null) {
-            namespace = new ArrayList<String>();
+            namespace = new ArrayList<>();
         }
         return this.namespace;
     }

@@ -17,18 +17,18 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType name="simpleType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;extension base="{http://www.w3.org/2001/XMLSchema}annotated"&gt;
- *       &lt;group ref="{http://www.w3.org/2001/XMLSchema}simpleDerivation"/&gt;
- *       &lt;attribute name="final" type="{http://www.w3.org/2001/XMLSchema}simpleDerivationSet" /&gt;
- *       &lt;attribute name="name" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
- *       &lt;anyAttribute processContents='lax' namespace='##other'/&gt;
- *     &lt;/extension&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType name="simpleType">
+ *   <complexContent>
+ *     <extension base="{http://www.w3.org/2001/XMLSchema}annotated">
+ *       <group ref="{http://www.w3.org/2001/XMLSchema}simpleDerivation"/>
+ *       <attribute name="final" type="{http://www.w3.org/2001/XMLSchema}simpleDerivationSet" />
+ *       <attribute name="name" type="{http://www.w3.org/2001/XMLSchema}NCName" />
+ *       <anyAttribute processContents='lax' namespace='##other'/>
+ *     </extension>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -135,8 +135,8 @@ public abstract class SimpleType
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the final property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the final property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -150,10 +150,12 @@ public abstract class SimpleType
      * {@link String }
      * 
      * 
+     * @return
+     *     The value of the final property.
      */
     public java.util.List<String> getFinal() {
         if (_final == null) {
-            _final = new ArrayList<String>();
+            _final = new ArrayList<>();
         }
         return this._final;
     }

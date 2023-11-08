@@ -1,6 +1,6 @@
 package com.softClub.Test.services;
 
-import com.softClub.Test.models.AbstractModelsTests;
+import com.softClub.Test.models.AbstractModelsTest;
 import com.softClub.Test.models.Currency;
 import com.softClub.Test.models.FinOperation;
 import com.softClub.Test.models.dto.FinOperationDTOResponse;
@@ -8,8 +8,8 @@ import com.softClub.Test.models.dto.ReportDTO;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -19,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
 
-class ReportServiceTest extends AbstractModelsTests {
+class ReportServiceTest extends AbstractModelsTest {
     private CurrencyService currencyService;
     private FinOperationService operationService;
     private ReportService reportService;
@@ -45,6 +45,9 @@ class ReportServiceTest extends AbstractModelsTests {
                 formFinOperation()
         );
 
+        List<String> checkList = new ArrayList<>();
+        list.forEach(item -> checkList.add(item.getSum().toString()));
+
         doReturn(currency)
                 .when(currencyService)
                 .findByVchCode(code);
@@ -61,10 +64,12 @@ class ReportServiceTest extends AbstractModelsTests {
         assertEquals(rate, reportDTO.getVunitRate());
         assertEquals(time1, reportDTO.getStartTime());
         assertEquals(time2, reportDTO.getFinishTime());
-        assertEquals(list.size(), reportDTO.getOperations().length);
+        assertEquals(checkList.size(), reportDTO.getOperations().length);
 
         for (int i = 0; i < operations.length; i++) {
-            assertNotEquals(list.get(i).getSum().toString(), operations[i].getSum());
+            String s1 = checkList.get(i);
+            String s2 = operations[i].getSum();
+            assertNotEquals(s1, s2);
         }
     }
 }

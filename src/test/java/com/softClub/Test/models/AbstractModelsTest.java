@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Random;
 
-public abstract class AbstractModelsTests {
+public abstract class AbstractModelsTest {
     protected static Random rnd = new Random();
     protected static LocalDateTime now = LocalDateTime.now();
 
@@ -36,11 +36,8 @@ public abstract class AbstractModelsTests {
     }
 
     public static FinOperation formFinOperation() {
-        FinOperation operation = new FinOperation();
+        FinOperation operation = new FinOperation(formFinOperationDTO(now));
         operation.setId(rnd.nextLong(100L));
-        operation.setSum(new BigDecimal("12345.67890"));
-        operation.setDescription("Test");
-        operation.setDateTime(now);
         return operation;
     }
 

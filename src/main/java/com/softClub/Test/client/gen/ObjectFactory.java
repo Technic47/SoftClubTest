@@ -1,10 +1,10 @@
 
 package com.softClub.Test.client.gen;
 
+import javax.xml.namespace.QName;
 import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.annotation.XmlElementDecl;
 import jakarta.xml.bind.annotation.XmlRegistry;
-import javax.xml.namespace.QName;
 
 
 /**
@@ -24,27 +24,27 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _SimpleType_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "simpleType");
-    private final static QName _ComplexType_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "complexType");
-    private final static QName _Group_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "group");
-    private final static QName _AttributeGroup_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "attributeGroup");
-    private final static QName _Element_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "element");
-    private final static QName _Attribute_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "attribute");
-    private final static QName _AnyAttribute_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "anyAttribute");
-    private final static QName _All_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "all");
-    private final static QName _Choice_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "choice");
-    private final static QName _Sequence_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "sequence");
-    private final static QName _Unique_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "unique");
-    private final static QName _Key_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "key");
-    private final static QName _MinExclusive_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "minExclusive");
-    private final static QName _MinInclusive_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "minInclusive");
-    private final static QName _MaxExclusive_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "maxExclusive");
-    private final static QName _MaxInclusive_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "maxInclusive");
-    private final static QName _FractionDigits_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "fractionDigits");
-    private final static QName _Length_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "length");
-    private final static QName _MinLength_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "minLength");
-    private final static QName _MaxLength_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "maxLength");
-    private final static QName _Enumeration_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "enumeration");
+    private static final QName _SimpleType_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "simpleType");
+    private static final QName _ComplexType_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "complexType");
+    private static final QName _Group_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "group");
+    private static final QName _AttributeGroup_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "attributeGroup");
+    private static final QName _Element_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "element");
+    private static final QName _Attribute_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "attribute");
+    private static final QName _AnyAttribute_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "anyAttribute");
+    private static final QName _All_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "all");
+    private static final QName _Choice_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "choice");
+    private static final QName _Sequence_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "sequence");
+    private static final QName _Unique_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "unique");
+    private static final QName _Key_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "key");
+    private static final QName _MinExclusive_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "minExclusive");
+    private static final QName _MinInclusive_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "minInclusive");
+    private static final QName _MaxExclusive_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "maxExclusive");
+    private static final QName _MaxInclusive_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "maxInclusive");
+    private static final QName _FractionDigits_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "fractionDigits");
+    private static final QName _Length_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "length");
+    private static final QName _MinLength_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "minLength");
+    private static final QName _MaxLength_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "maxLength");
+    private static final QName _Enumeration_QNAME = new QName("http://www.w3.org/2001/XMLSchema", "enumeration");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.softClub.Test.client.gen
@@ -56,6 +56,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetReutersCursOnDateResponse }
      * 
+     * @return
+     *     the new instance of {@link GetReutersCursOnDateResponse }
      */
     public GetReutersCursOnDateResponse createGetReutersCursOnDateResponse() {
         return new GetReutersCursOnDateResponse();
@@ -64,6 +66,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetReutersCursDynamicXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link GetReutersCursDynamicXMLResponse }
      */
     public GetReutersCursDynamicXMLResponse createGetReutersCursDynamicXMLResponse() {
         return new GetReutersCursDynamicXMLResponse();
@@ -72,6 +76,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetReutersCursDynamicResponse }
      * 
+     * @return
+     *     the new instance of {@link GetReutersCursDynamicResponse }
      */
     public GetReutersCursDynamicResponse createGetReutersCursDynamicResponse() {
         return new GetReutersCursDynamicResponse();
@@ -80,6 +86,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetCursDynamicXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link GetCursDynamicXMLResponse }
      */
     public GetCursDynamicXMLResponse createGetCursDynamicXMLResponse() {
         return new GetCursDynamicXMLResponse();
@@ -88,6 +96,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetCursDynamicResponse }
      * 
+     * @return
+     *     the new instance of {@link GetCursDynamicResponse }
      */
     public GetCursDynamicResponse createGetCursDynamicResponse() {
         return new GetCursDynamicResponse();
@@ -96,6 +106,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetCursOnDateXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link GetCursOnDateXMLResponse }
      */
     public GetCursOnDateXMLResponse createGetCursOnDateXMLResponse() {
         return new GetCursOnDateXMLResponse();
@@ -104,6 +116,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetSeldCursOnDateXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link GetSeldCursOnDateXMLResponse }
      */
     public GetSeldCursOnDateXMLResponse createGetSeldCursOnDateXMLResponse() {
         return new GetSeldCursOnDateXMLResponse();
@@ -112,6 +126,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetSeldCursOnDateResponse }
      * 
+     * @return
+     *     the new instance of {@link GetSeldCursOnDateResponse }
      */
     public GetSeldCursOnDateResponse createGetSeldCursOnDateResponse() {
         return new GetSeldCursOnDateResponse();
@@ -120,6 +136,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetCursOnDateResponse }
      * 
+     * @return
+     *     the new instance of {@link GetCursOnDateResponse }
      */
     public GetCursOnDateResponse createGetCursOnDateResponse() {
         return new GetCursOnDateResponse();
@@ -128,6 +146,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SaldoXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link SaldoXMLResponse }
      */
     public SaldoXMLResponse createSaldoXMLResponse() {
         return new SaldoXMLResponse();
@@ -136,6 +156,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ROISfixXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link ROISfixXMLResponse }
      */
     public ROISfixXMLResponse createROISfixXMLResponse() {
         return new ROISfixXMLResponse();
@@ -144,6 +166,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link RuoniaXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link RuoniaXMLResponse }
      */
     public RuoniaXMLResponse createRuoniaXMLResponse() {
         return new RuoniaXMLResponse();
@@ -152,6 +176,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link OstatDepoNewXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link OstatDepoNewXMLResponse }
      */
     public OstatDepoNewXMLResponse createOstatDepoNewXMLResponse() {
         return new OstatDepoNewXMLResponse();
@@ -160,6 +186,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link OstatDepoXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link OstatDepoXMLResponse }
      */
     public OstatDepoXMLResponse createOstatDepoXMLResponse() {
         return new OstatDepoXMLResponse();
@@ -168,6 +196,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ValIntDayXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link ValIntDayXMLResponse }
      */
     public ValIntDayXMLResponse createValIntDayXMLResponse() {
         return new ValIntDayXMLResponse();
@@ -176,6 +206,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ValIntDayResponse }
      * 
+     * @return
+     *     the new instance of {@link ValIntDayResponse }
      */
     public ValIntDayResponse createValIntDayResponse() {
         return new ValIntDayResponse();
@@ -184,6 +216,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link OstatDepoNewResponse }
      * 
+     * @return
+     *     the new instance of {@link OstatDepoNewResponse }
      */
     public OstatDepoNewResponse createOstatDepoNewResponse() {
         return new OstatDepoNewResponse();
@@ -192,6 +226,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link OstatDepoResponse }
      * 
+     * @return
+     *     the new instance of {@link OstatDepoResponse }
      */
     public OstatDepoResponse createOstatDepoResponse() {
         return new OstatDepoResponse();
@@ -200,6 +236,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ROISfixResponse }
      * 
+     * @return
+     *     the new instance of {@link ROISfixResponse }
      */
     public ROISfixResponse createROISfixResponse() {
         return new ROISfixResponse();
@@ -208,6 +246,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link RuoniaResponse }
      * 
+     * @return
+     *     the new instance of {@link RuoniaResponse }
      */
     public RuoniaResponse createRuoniaResponse() {
         return new RuoniaResponse();
@@ -216,6 +256,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link RuoniaSVResponse }
      * 
+     * @return
+     *     the new instance of {@link RuoniaSVResponse }
      */
     public RuoniaSVResponse createRuoniaSVResponse() {
         return new RuoniaSVResponse();
@@ -224,6 +266,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link RuoniaSVXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link RuoniaSVXMLResponse }
      */
     public RuoniaSVXMLResponse createRuoniaSVXMLResponse() {
         return new RuoniaSVXMLResponse();
@@ -232,6 +276,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Mrrf7DResponse }
      * 
+     * @return
+     *     the new instance of {@link Mrrf7DResponse }
      */
     public Mrrf7DResponse createMrrf7DResponse() {
         return new Mrrf7DResponse();
@@ -240,6 +286,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Mrrf7DXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link Mrrf7DXMLResponse }
      */
     public Mrrf7DXMLResponse createMrrf7DXMLResponse() {
         return new Mrrf7DXMLResponse();
@@ -248,6 +296,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link RepoDebtUSDResponse }
      * 
+     * @return
+     *     the new instance of {@link RepoDebtUSDResponse }
      */
     public RepoDebtUSDResponse createRepoDebtUSDResponse() {
         return new RepoDebtUSDResponse();
@@ -256,6 +306,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link RepoDebtUSDXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link RepoDebtUSDXMLResponse }
      */
     public RepoDebtUSDXMLResponse createRepoDebtUSDXMLResponse() {
         return new RepoDebtUSDXMLResponse();
@@ -264,6 +316,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link MrrfResponse }
      * 
+     * @return
+     *     the new instance of {@link MrrfResponse }
      */
     public MrrfResponse createMrrfResponse() {
         return new MrrfResponse();
@@ -272,6 +326,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link MrrfXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link MrrfXMLResponse }
      */
     public MrrfXMLResponse createMrrfXMLResponse() {
         return new MrrfXMLResponse();
@@ -280,6 +336,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SaldoResponse }
      * 
+     * @return
+     *     the new instance of {@link SaldoResponse }
      */
     public SaldoResponse createSaldoResponse() {
         return new SaldoResponse();
@@ -288,6 +346,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link NewsInfoXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link NewsInfoXMLResponse }
      */
     public NewsInfoXMLResponse createNewsInfoXMLResponse() {
         return new NewsInfoXMLResponse();
@@ -296,6 +356,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link OmodInfoXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link OmodInfoXMLResponse }
      */
     public OmodInfoXMLResponse createOmodInfoXMLResponse() {
         return new OmodInfoXMLResponse();
@@ -304,6 +366,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link XVolResponse }
      * 
+     * @return
+     *     the new instance of {@link XVolResponse }
      */
     public XVolResponse createXVolResponse() {
         return new XVolResponse();
@@ -312,6 +376,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link XVolXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link XVolXMLResponse }
      */
     public XVolXMLResponse createXVolXMLResponse() {
         return new XVolXMLResponse();
@@ -320,6 +386,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link MainInfoXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link MainInfoXMLResponse }
      */
     public MainInfoXMLResponse createMainInfoXMLResponse() {
         return new MainInfoXMLResponse();
@@ -328,6 +396,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link AllDataInfoXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link AllDataInfoXMLResponse }
      */
     public AllDataInfoXMLResponse createAllDataInfoXMLResponse() {
         return new AllDataInfoXMLResponse();
@@ -336,6 +406,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link NewsInfoResponse }
      * 
+     * @return
+     *     the new instance of {@link NewsInfoResponse }
      */
     public NewsInfoResponse createNewsInfoResponse() {
         return new NewsInfoResponse();
@@ -344,6 +416,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapDayTotalResponse }
      * 
+     * @return
+     *     the new instance of {@link SwapDayTotalResponse }
      */
     public SwapDayTotalResponse createSwapDayTotalResponse() {
         return new SwapDayTotalResponse();
@@ -352,6 +426,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapDayTotalXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link SwapDayTotalXMLResponse }
      */
     public SwapDayTotalXMLResponse createSwapDayTotalXMLResponse() {
         return new SwapDayTotalXMLResponse();
@@ -360,6 +436,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapDynamicXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link SwapDynamicXMLResponse }
      */
     public SwapDynamicXMLResponse createSwapDynamicXMLResponse() {
         return new SwapDynamicXMLResponse();
@@ -368,6 +446,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapInfoSellUSDVolXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link SwapInfoSellUSDVolXMLResponse }
      */
     public SwapInfoSellUSDVolXMLResponse createSwapInfoSellUSDVolXMLResponse() {
         return new SwapInfoSellUSDVolXMLResponse();
@@ -376,6 +456,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapInfoSellUSDVolResponse }
      * 
+     * @return
+     *     the new instance of {@link SwapInfoSellUSDVolResponse }
      */
     public SwapInfoSellUSDVolResponse createSwapInfoSellUSDVolResponse() {
         return new SwapInfoSellUSDVolResponse();
@@ -384,6 +466,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapInfoSellVolXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link SwapInfoSellVolXMLResponse }
      */
     public SwapInfoSellVolXMLResponse createSwapInfoSellVolXMLResponse() {
         return new SwapInfoSellVolXMLResponse();
@@ -392,6 +476,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapInfoSellVolResponse }
      * 
+     * @return
+     *     the new instance of {@link SwapInfoSellVolResponse }
      */
     public SwapInfoSellVolResponse createSwapInfoSellVolResponse() {
         return new SwapInfoSellVolResponse();
@@ -400,6 +486,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapInfoSellUSDResponse }
      * 
+     * @return
+     *     the new instance of {@link SwapInfoSellUSDResponse }
      */
     public SwapInfoSellUSDResponse createSwapInfoSellUSDResponse() {
         return new SwapInfoSellUSDResponse();
@@ -408,6 +496,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapInfoSellUSDXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link SwapInfoSellUSDXMLResponse }
      */
     public SwapInfoSellUSDXMLResponse createSwapInfoSellUSDXMLResponse() {
         return new SwapInfoSellUSDXMLResponse();
@@ -416,6 +506,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapInfoSellResponse }
      * 
+     * @return
+     *     the new instance of {@link SwapInfoSellResponse }
      */
     public SwapInfoSellResponse createSwapInfoSellResponse() {
         return new SwapInfoSellResponse();
@@ -424,6 +516,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapInfoSellXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link SwapInfoSellXMLResponse }
      */
     public SwapInfoSellXMLResponse createSwapInfoSellXMLResponse() {
         return new SwapInfoSellXMLResponse();
@@ -432,6 +526,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link BliquidityResponse }
      * 
+     * @return
+     *     the new instance of {@link BliquidityResponse }
      */
     public BliquidityResponse createBliquidityResponse() {
         return new BliquidityResponse();
@@ -440,6 +536,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link BliquidityXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link BliquidityXMLResponse }
      */
     public BliquidityXMLResponse createBliquidityXMLResponse() {
         return new BliquidityXMLResponse();
@@ -448,6 +546,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link BiCurBaseXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link BiCurBaseXMLResponse }
      */
     public BiCurBaseXMLResponse createBiCurBaseXMLResponse() {
         return new BiCurBaseXMLResponse();
@@ -456,6 +556,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link BiCurBaseResponse }
      * 
+     * @return
+     *     the new instance of {@link BiCurBaseResponse }
      */
     public BiCurBaseResponse createBiCurBaseResponse() {
         return new BiCurBaseResponse();
@@ -464,6 +566,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link BiCurBacketXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link BiCurBacketXMLResponse }
      */
     public BiCurBacketXMLResponse createBiCurBacketXMLResponse() {
         return new BiCurBacketXMLResponse();
@@ -472,6 +576,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link BiCurBacketResponse }
      * 
+     * @return
+     *     the new instance of {@link BiCurBacketResponse }
      */
     public BiCurBacketResponse createBiCurBacketResponse() {
         return new BiCurBacketResponse();
@@ -480,6 +586,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapDynamicResponse }
      * 
+     * @return
+     *     the new instance of {@link SwapDynamicResponse }
      */
     public SwapDynamicResponse createSwapDynamicResponse() {
         return new SwapDynamicResponse();
@@ -488,6 +596,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapMonthTotalResponse }
      * 
+     * @return
+     *     the new instance of {@link SwapMonthTotalResponse }
      */
     public SwapMonthTotalResponse createSwapMonthTotalResponse() {
         return new SwapMonthTotalResponse();
@@ -496,6 +606,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapMonthTotalXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link SwapMonthTotalXMLResponse }
      */
     public SwapMonthTotalXMLResponse createSwapMonthTotalXMLResponse() {
         return new SwapMonthTotalXMLResponse();
@@ -504,6 +616,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link MKRResponse }
      * 
+     * @return
+     *     the new instance of {@link MKRResponse }
      */
     public MKRResponse createMKRResponse() {
         return new MKRResponse();
@@ -512,6 +626,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link MKRXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link MKRXMLResponse }
      */
     public MKRXMLResponse createMKRXMLResponse() {
         return new MKRXMLResponse();
@@ -520,6 +636,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link KeyRateResponse }
      * 
+     * @return
+     *     the new instance of {@link KeyRateResponse }
      */
     public KeyRateResponse createKeyRateResponse() {
         return new KeyRateResponse();
@@ -528,6 +646,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link KeyRateXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link KeyRateXMLResponse }
      */
     public KeyRateXMLResponse createKeyRateXMLResponse() {
         return new KeyRateXMLResponse();
@@ -536,6 +656,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link DVResponse }
      * 
+     * @return
+     *     the new instance of {@link DVResponse }
      */
     public DVResponse createDVResponse() {
         return new DVResponse();
@@ -544,6 +666,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link DVXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link DVXMLResponse }
      */
     public DVXMLResponse createDVXMLResponse() {
         return new DVXMLResponse();
@@ -552,6 +676,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link RepoDebtResponse }
      * 
+     * @return
+     *     the new instance of {@link RepoDebtResponse }
      */
     public RepoDebtResponse createRepoDebtResponse() {
         return new RepoDebtResponse();
@@ -560,6 +686,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link RepoDebtXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link RepoDebtXMLResponse }
      */
     public RepoDebtXMLResponse createRepoDebtXMLResponse() {
         return new RepoDebtXMLResponse();
@@ -568,6 +696,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link CoinsBaseResponse }
      * 
+     * @return
+     *     the new instance of {@link CoinsBaseResponse }
      */
     public CoinsBaseResponse createCoinsBaseResponse() {
         return new CoinsBaseResponse();
@@ -576,6 +706,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link CoinsBaseXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link CoinsBaseXMLResponse }
      */
     public CoinsBaseXMLResponse createCoinsBaseXMLResponse() {
         return new CoinsBaseXMLResponse();
@@ -584,6 +716,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link FixingBaseResponse }
      * 
+     * @return
+     *     the new instance of {@link FixingBaseResponse }
      */
     public FixingBaseResponse createFixingBaseResponse() {
         return new FixingBaseResponse();
@@ -592,6 +726,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link FixingBaseXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link FixingBaseXMLResponse }
      */
     public FixingBaseXMLResponse createFixingBaseXMLResponse() {
         return new FixingBaseXMLResponse();
@@ -600,6 +736,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link OvernightResponse }
      * 
+     * @return
+     *     the new instance of {@link OvernightResponse }
      */
     public OvernightResponse createOvernightResponse() {
         return new OvernightResponse();
@@ -608,6 +746,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link OvernightXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link OvernightXMLResponse }
      */
     public OvernightXMLResponse createOvernightXMLResponse() {
         return new OvernightXMLResponse();
@@ -616,6 +756,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link BauctionResponse }
      * 
+     * @return
+     *     the new instance of {@link BauctionResponse }
      */
     public BauctionResponse createBauctionResponse() {
         return new BauctionResponse();
@@ -624,6 +766,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link BauctionXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link BauctionXMLResponse }
      */
     public BauctionXMLResponse createBauctionXMLResponse() {
         return new BauctionXMLResponse();
@@ -632,6 +776,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link DepoDynamicXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link DepoDynamicXMLResponse }
      */
     public DepoDynamicXMLResponse createDepoDynamicXMLResponse() {
         return new DepoDynamicXMLResponse();
@@ -640,6 +786,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link DepoDynamicResponse }
      * 
+     * @return
+     *     the new instance of {@link DepoDynamicResponse }
      */
     public DepoDynamicResponse createDepoDynamicResponse() {
         return new DepoDynamicResponse();
@@ -648,6 +796,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link OstatDynamicXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link OstatDynamicXMLResponse }
      */
     public OstatDynamicXMLResponse createOstatDynamicXMLResponse() {
         return new OstatDynamicXMLResponse();
@@ -656,6 +806,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link OstatDynamicResponse }
      * 
+     * @return
+     *     the new instance of {@link OstatDynamicResponse }
      */
     public OstatDynamicResponse createOstatDynamicResponse() {
         return new OstatDynamicResponse();
@@ -664,6 +816,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link DragMetDynamicXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link DragMetDynamicXMLResponse }
      */
     public DragMetDynamicXMLResponse createDragMetDynamicXMLResponse() {
         return new DragMetDynamicXMLResponse();
@@ -672,6 +826,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link DragMetDynamicResponse }
      * 
+     * @return
+     *     the new instance of {@link DragMetDynamicResponse }
      */
     public DragMetDynamicResponse createDragMetDynamicResponse() {
         return new DragMetDynamicResponse();
@@ -680,6 +836,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link EnumValutesXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link EnumValutesXMLResponse }
      */
     public EnumValutesXMLResponse createEnumValutesXMLResponse() {
         return new EnumValutesXMLResponse();
@@ -688,6 +846,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link EnumValutesResponse }
      * 
+     * @return
+     *     the new instance of {@link EnumValutesResponse }
      */
     public EnumValutesResponse createEnumValutesResponse() {
         return new EnumValutesResponse();
@@ -696,6 +856,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link EnumReutersValutesXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link EnumReutersValutesXMLResponse }
      */
     public EnumReutersValutesXMLResponse createEnumReutersValutesXMLResponse() {
         return new EnumReutersValutesXMLResponse();
@@ -704,6 +866,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link EnumReutersValutesResponse }
      * 
+     * @return
+     *     the new instance of {@link EnumReutersValutesResponse }
      */
     public EnumReutersValutesResponse createEnumReutersValutesResponse() {
         return new EnumReutersValutesResponse();
@@ -712,6 +876,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetReutersCursOnDateXMLResponse }
      * 
+     * @return
+     *     the new instance of {@link GetReutersCursOnDateXMLResponse }
      */
     public GetReutersCursOnDateXMLResponse createGetReutersCursOnDateXMLResponse() {
         return new GetReutersCursOnDateXMLResponse();
@@ -720,6 +886,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Schema }
      * 
+     * @return
+     *     the new instance of {@link Schema }
      */
     public Schema createSchema() {
         return new Schema();
@@ -728,6 +896,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link OpenAttrs }
      * 
+     * @return
+     *     the new instance of {@link OpenAttrs }
      */
     public OpenAttrs createOpenAttrs() {
         return new OpenAttrs();
@@ -736,6 +906,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Include }
      * 
+     * @return
+     *     the new instance of {@link Include }
      */
     public Include createInclude() {
         return new Include();
@@ -744,6 +916,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Annotated }
      * 
+     * @return
+     *     the new instance of {@link Annotated }
      */
     public Annotated createAnnotated() {
         return new Annotated();
@@ -752,6 +926,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Annotation }
      * 
+     * @return
+     *     the new instance of {@link Annotation }
      */
     public Annotation createAnnotation() {
         return new Annotation();
@@ -760,6 +936,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Appinfo }
      * 
+     * @return
+     *     the new instance of {@link Appinfo }
      */
     public Appinfo createAppinfo() {
         return new Appinfo();
@@ -768,6 +946,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Documentation }
      * 
+     * @return
+     *     the new instance of {@link Documentation }
      */
     public Documentation createDocumentation() {
         return new Documentation();
@@ -776,6 +956,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Import }
      * 
+     * @return
+     *     the new instance of {@link Import }
      */
     public Import createImport() {
         return new Import();
@@ -784,6 +966,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Redefine }
      * 
+     * @return
+     *     the new instance of {@link Redefine }
      */
     public Redefine createRedefine() {
         return new Redefine();
@@ -792,6 +976,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link TopLevelSimpleType }
      * 
+     * @return
+     *     the new instance of {@link TopLevelSimpleType }
      */
     public TopLevelSimpleType createTopLevelSimpleType() {
         return new TopLevelSimpleType();
@@ -800,6 +986,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link TopLevelComplexType }
      * 
+     * @return
+     *     the new instance of {@link TopLevelComplexType }
      */
     public TopLevelComplexType createTopLevelComplexType() {
         return new TopLevelComplexType();
@@ -808,6 +996,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link NamedGroup }
      * 
+     * @return
+     *     the new instance of {@link NamedGroup }
      */
     public NamedGroup createNamedGroup() {
         return new NamedGroup();
@@ -816,6 +1006,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link NamedAttributeGroup }
      * 
+     * @return
+     *     the new instance of {@link NamedAttributeGroup }
      */
     public NamedAttributeGroup createNamedAttributeGroup() {
         return new NamedAttributeGroup();
@@ -824,6 +1016,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link TopLevelElement }
      * 
+     * @return
+     *     the new instance of {@link TopLevelElement }
      */
     public TopLevelElement createTopLevelElement() {
         return new TopLevelElement();
@@ -832,6 +1026,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link TopLevelAttribute }
      * 
+     * @return
+     *     the new instance of {@link TopLevelAttribute }
      */
     public TopLevelAttribute createTopLevelAttribute() {
         return new TopLevelAttribute();
@@ -840,6 +1036,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Notation }
      * 
+     * @return
+     *     the new instance of {@link Notation }
      */
     public Notation createNotation() {
         return new Notation();
@@ -848,6 +1046,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Wildcard }
      * 
+     * @return
+     *     the new instance of {@link Wildcard }
      */
     public Wildcard createWildcard() {
         return new Wildcard();
@@ -856,6 +1056,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ComplexContent }
      * 
+     * @return
+     *     the new instance of {@link ComplexContent }
      */
     public ComplexContent createComplexContent() {
         return new ComplexContent();
@@ -864,6 +1066,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ComplexRestrictionType }
      * 
+     * @return
+     *     the new instance of {@link ComplexRestrictionType }
      */
     public ComplexRestrictionType createComplexRestrictionType() {
         return new ComplexRestrictionType();
@@ -872,6 +1076,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ExtensionType }
      * 
+     * @return
+     *     the new instance of {@link ExtensionType }
      */
     public ExtensionType createExtensionType() {
         return new ExtensionType();
@@ -880,6 +1086,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SimpleContent }
      * 
+     * @return
+     *     the new instance of {@link SimpleContent }
      */
     public SimpleContent createSimpleContent() {
         return new SimpleContent();
@@ -888,6 +1096,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SimpleRestrictionType }
      * 
+     * @return
+     *     the new instance of {@link SimpleRestrictionType }
      */
     public SimpleRestrictionType createSimpleRestrictionType() {
         return new SimpleRestrictionType();
@@ -896,6 +1106,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SimpleExtensionType }
      * 
+     * @return
+     *     the new instance of {@link SimpleExtensionType }
      */
     public SimpleExtensionType createSimpleExtensionType() {
         return new SimpleExtensionType();
@@ -904,6 +1116,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link All }
      * 
+     * @return
+     *     the new instance of {@link All }
      */
     public All createAll() {
         return new All();
@@ -912,6 +1126,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ExplicitGroup }
      * 
+     * @return
+     *     the new instance of {@link ExplicitGroup }
      */
     public ExplicitGroup createExplicitGroup() {
         return new ExplicitGroup();
@@ -920,6 +1136,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Any }
      * 
+     * @return
+     *     the new instance of {@link Any }
      */
     public Any createAny() {
         return new Any();
@@ -928,6 +1146,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Selector }
      * 
+     * @return
+     *     the new instance of {@link Selector }
      */
     public Selector createSelector() {
         return new Selector();
@@ -936,6 +1156,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Field }
      * 
+     * @return
+     *     the new instance of {@link Field }
      */
     public Field createField() {
         return new Field();
@@ -944,6 +1166,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Keybase }
      * 
+     * @return
+     *     the new instance of {@link Keybase }
      */
     public Keybase createKeybase() {
         return new Keybase();
@@ -952,6 +1176,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Keyref }
      * 
+     * @return
+     *     the new instance of {@link Keyref }
      */
     public Keyref createKeyref() {
         return new Keyref();
@@ -960,6 +1186,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Restriction }
      * 
+     * @return
+     *     the new instance of {@link Restriction }
      */
     public Restriction createRestriction() {
         return new Restriction();
@@ -968,6 +1196,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link LocalSimpleType }
      * 
+     * @return
+     *     the new instance of {@link LocalSimpleType }
      */
     public LocalSimpleType createLocalSimpleType() {
         return new LocalSimpleType();
@@ -976,6 +1206,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Facet }
      * 
+     * @return
+     *     the new instance of {@link Facet }
      */
     public Facet createFacet() {
         return new Facet();
@@ -984,6 +1216,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link TotalDigits }
      * 
+     * @return
+     *     the new instance of {@link TotalDigits }
      */
     public TotalDigits createTotalDigits() {
         return new TotalDigits();
@@ -992,6 +1226,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link NumFacet }
      * 
+     * @return
+     *     the new instance of {@link NumFacet }
      */
     public NumFacet createNumFacet() {
         return new NumFacet();
@@ -1000,6 +1236,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link NoFixedFacet }
      * 
+     * @return
+     *     the new instance of {@link NoFixedFacet }
      */
     public NoFixedFacet createNoFixedFacet() {
         return new NoFixedFacet();
@@ -1008,6 +1246,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link WhiteSpace }
      * 
+     * @return
+     *     the new instance of {@link WhiteSpace }
      */
     public WhiteSpace createWhiteSpace() {
         return new WhiteSpace();
@@ -1016,6 +1256,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Pattern }
      * 
+     * @return
+     *     the new instance of {@link Pattern }
      */
     public Pattern createPattern() {
         return new Pattern();
@@ -1024,6 +1266,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link List }
      * 
+     * @return
+     *     the new instance of {@link List }
      */
     public List createList() {
         return new List();
@@ -1032,6 +1276,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Union }
      * 
+     * @return
+     *     the new instance of {@link Union }
      */
     public Union createUnion() {
         return new Union();
@@ -1040,6 +1286,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Attribute }
      * 
+     * @return
+     *     the new instance of {@link Attribute }
      */
     public Attribute createAttribute() {
         return new Attribute();
@@ -1048,6 +1296,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link LocalComplexType }
      * 
+     * @return
+     *     the new instance of {@link LocalComplexType }
      */
     public LocalComplexType createLocalComplexType() {
         return new LocalComplexType();
@@ -1056,6 +1306,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link RestrictionType }
      * 
+     * @return
+     *     the new instance of {@link RestrictionType }
      */
     public RestrictionType createRestrictionType() {
         return new RestrictionType();
@@ -1064,6 +1316,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link LocalElement }
      * 
+     * @return
+     *     the new instance of {@link LocalElement }
      */
     public LocalElement createLocalElement() {
         return new LocalElement();
@@ -1072,6 +1326,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link RealGroup }
      * 
+     * @return
+     *     the new instance of {@link RealGroup }
      */
     public RealGroup createRealGroup() {
         return new RealGroup();
@@ -1080,6 +1336,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GroupRef }
      * 
+     * @return
+     *     the new instance of {@link GroupRef }
      */
     public GroupRef createGroupRef() {
         return new GroupRef();
@@ -1088,6 +1346,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SimpleExplicitGroup }
      * 
+     * @return
+     *     the new instance of {@link SimpleExplicitGroup }
      */
     public SimpleExplicitGroup createSimpleExplicitGroup() {
         return new SimpleExplicitGroup();
@@ -1096,6 +1356,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link NarrowMaxMin }
      * 
+     * @return
+     *     the new instance of {@link NarrowMaxMin }
      */
     public NarrowMaxMin createNarrowMaxMin() {
         return new NarrowMaxMin();
@@ -1104,6 +1366,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link AttributeGroupRef }
      * 
+     * @return
+     *     the new instance of {@link AttributeGroupRef }
      */
     public AttributeGroupRef createAttributeGroupRef() {
         return new AttributeGroupRef();
@@ -1112,6 +1376,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetReutersCursOnDate }
      * 
+     * @return
+     *     the new instance of {@link GetReutersCursOnDate }
      */
     public GetReutersCursOnDate createGetReutersCursOnDate() {
         return new GetReutersCursOnDate();
@@ -1120,6 +1386,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetReutersCursOnDateResponse.GetReutersCursOnDateResult }
      * 
+     * @return
+     *     the new instance of {@link GetReutersCursOnDateResponse.GetReutersCursOnDateResult }
      */
     public GetReutersCursOnDateResponse.GetReutersCursOnDateResult createGetReutersCursOnDateResponseGetReutersCursOnDateResult() {
         return new GetReutersCursOnDateResponse.GetReutersCursOnDateResult();
@@ -1128,6 +1396,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetReutersCursDynamicXML }
      * 
+     * @return
+     *     the new instance of {@link GetReutersCursDynamicXML }
      */
     public GetReutersCursDynamicXML createGetReutersCursDynamicXML() {
         return new GetReutersCursDynamicXML();
@@ -1136,6 +1406,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetReutersCursDynamicXMLResponse.GetReutersCursDynamicXMLResult }
      * 
+     * @return
+     *     the new instance of {@link GetReutersCursDynamicXMLResponse.GetReutersCursDynamicXMLResult }
      */
     public GetReutersCursDynamicXMLResponse.GetReutersCursDynamicXMLResult createGetReutersCursDynamicXMLResponseGetReutersCursDynamicXMLResult() {
         return new GetReutersCursDynamicXMLResponse.GetReutersCursDynamicXMLResult();
@@ -1144,6 +1416,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetReutersCursDynamic }
      * 
+     * @return
+     *     the new instance of {@link GetReutersCursDynamic }
      */
     public GetReutersCursDynamic createGetReutersCursDynamic() {
         return new GetReutersCursDynamic();
@@ -1152,6 +1426,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetReutersCursDynamicResponse.GetReutersCursDynamicResult }
      * 
+     * @return
+     *     the new instance of {@link GetReutersCursDynamicResponse.GetReutersCursDynamicResult }
      */
     public GetReutersCursDynamicResponse.GetReutersCursDynamicResult createGetReutersCursDynamicResponseGetReutersCursDynamicResult() {
         return new GetReutersCursDynamicResponse.GetReutersCursDynamicResult();
@@ -1160,6 +1436,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetCursDynamicXML }
      * 
+     * @return
+     *     the new instance of {@link GetCursDynamicXML }
      */
     public GetCursDynamicXML createGetCursDynamicXML() {
         return new GetCursDynamicXML();
@@ -1168,6 +1446,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetCursDynamicXMLResponse.GetCursDynamicXMLResult }
      * 
+     * @return
+     *     the new instance of {@link GetCursDynamicXMLResponse.GetCursDynamicXMLResult }
      */
     public GetCursDynamicXMLResponse.GetCursDynamicXMLResult createGetCursDynamicXMLResponseGetCursDynamicXMLResult() {
         return new GetCursDynamicXMLResponse.GetCursDynamicXMLResult();
@@ -1176,6 +1456,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetCursDynamic }
      * 
+     * @return
+     *     the new instance of {@link GetCursDynamic }
      */
     public GetCursDynamic createGetCursDynamic() {
         return new GetCursDynamic();
@@ -1184,6 +1466,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetCursDynamicResponse.GetCursDynamicResult }
      * 
+     * @return
+     *     the new instance of {@link GetCursDynamicResponse.GetCursDynamicResult }
      */
     public GetCursDynamicResponse.GetCursDynamicResult createGetCursDynamicResponseGetCursDynamicResult() {
         return new GetCursDynamicResponse.GetCursDynamicResult();
@@ -1192,6 +1476,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetCursOnDateXML }
      * 
+     * @return
+     *     the new instance of {@link GetCursOnDateXML }
      */
     public GetCursOnDateXML createGetCursOnDateXML() {
         return new GetCursOnDateXML();
@@ -1200,6 +1486,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetCursOnDateXMLResponse.GetCursOnDateXMLResult }
      * 
+     * @return
+     *     the new instance of {@link GetCursOnDateXMLResponse.GetCursOnDateXMLResult }
      */
     public GetCursOnDateXMLResponse.GetCursOnDateXMLResult createGetCursOnDateXMLResponseGetCursOnDateXMLResult() {
         return new GetCursOnDateXMLResponse.GetCursOnDateXMLResult();
@@ -1208,6 +1496,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetSeldCursOnDateXML }
      * 
+     * @return
+     *     the new instance of {@link GetSeldCursOnDateXML }
      */
     public GetSeldCursOnDateXML createGetSeldCursOnDateXML() {
         return new GetSeldCursOnDateXML();
@@ -1216,6 +1506,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetSeldCursOnDateXMLResponse.GetSeldCursOnDateXMLResult }
      * 
+     * @return
+     *     the new instance of {@link GetSeldCursOnDateXMLResponse.GetSeldCursOnDateXMLResult }
      */
     public GetSeldCursOnDateXMLResponse.GetSeldCursOnDateXMLResult createGetSeldCursOnDateXMLResponseGetSeldCursOnDateXMLResult() {
         return new GetSeldCursOnDateXMLResponse.GetSeldCursOnDateXMLResult();
@@ -1224,6 +1516,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetSeldCursOnDate }
      * 
+     * @return
+     *     the new instance of {@link GetSeldCursOnDate }
      */
     public GetSeldCursOnDate createGetSeldCursOnDate() {
         return new GetSeldCursOnDate();
@@ -1232,6 +1526,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetSeldCursOnDateResponse.GetSeldCursOnDateResult }
      * 
+     * @return
+     *     the new instance of {@link GetSeldCursOnDateResponse.GetSeldCursOnDateResult }
      */
     public GetSeldCursOnDateResponse.GetSeldCursOnDateResult createGetSeldCursOnDateResponseGetSeldCursOnDateResult() {
         return new GetSeldCursOnDateResponse.GetSeldCursOnDateResult();
@@ -1240,6 +1536,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetCursOnDate }
      * 
+     * @return
+     *     the new instance of {@link GetCursOnDate }
      */
     public GetCursOnDate createGetCursOnDate() {
         return new GetCursOnDate();
@@ -1248,6 +1546,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetCursOnDateResponse.GetCursOnDateResult }
      * 
+     * @return
+     *     the new instance of {@link GetCursOnDateResponse.GetCursOnDateResult }
      */
     public GetCursOnDateResponse.GetCursOnDateResult createGetCursOnDateResponseGetCursOnDateResult() {
         return new GetCursOnDateResponse.GetCursOnDateResult();
@@ -1256,6 +1556,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SaldoXML }
      * 
+     * @return
+     *     the new instance of {@link SaldoXML }
      */
     public SaldoXML createSaldoXML() {
         return new SaldoXML();
@@ -1264,6 +1566,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SaldoXMLResponse.SaldoXMLResult }
      * 
+     * @return
+     *     the new instance of {@link SaldoXMLResponse.SaldoXMLResult }
      */
     public SaldoXMLResponse.SaldoXMLResult createSaldoXMLResponseSaldoXMLResult() {
         return new SaldoXMLResponse.SaldoXMLResult();
@@ -1272,6 +1576,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ROISfixXML }
      * 
+     * @return
+     *     the new instance of {@link ROISfixXML }
      */
     public ROISfixXML createROISfixXML() {
         return new ROISfixXML();
@@ -1280,6 +1586,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ROISfixXMLResponse.ROISfixXMLResult }
      * 
+     * @return
+     *     the new instance of {@link ROISfixXMLResponse.ROISfixXMLResult }
      */
     public ROISfixXMLResponse.ROISfixXMLResult createROISfixXMLResponseROISfixXMLResult() {
         return new ROISfixXMLResponse.ROISfixXMLResult();
@@ -1288,6 +1596,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link RuoniaXML }
      * 
+     * @return
+     *     the new instance of {@link RuoniaXML }
      */
     public RuoniaXML createRuoniaXML() {
         return new RuoniaXML();
@@ -1296,6 +1606,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link RuoniaXMLResponse.RuoniaXMLResult }
      * 
+     * @return
+     *     the new instance of {@link RuoniaXMLResponse.RuoniaXMLResult }
      */
     public RuoniaXMLResponse.RuoniaXMLResult createRuoniaXMLResponseRuoniaXMLResult() {
         return new RuoniaXMLResponse.RuoniaXMLResult();
@@ -1304,6 +1616,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link OstatDepoNewXML }
      * 
+     * @return
+     *     the new instance of {@link OstatDepoNewXML }
      */
     public OstatDepoNewXML createOstatDepoNewXML() {
         return new OstatDepoNewXML();
@@ -1312,6 +1626,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link OstatDepoNewXMLResponse.OstatDepoNewXMLResult }
      * 
+     * @return
+     *     the new instance of {@link OstatDepoNewXMLResponse.OstatDepoNewXMLResult }
      */
     public OstatDepoNewXMLResponse.OstatDepoNewXMLResult createOstatDepoNewXMLResponseOstatDepoNewXMLResult() {
         return new OstatDepoNewXMLResponse.OstatDepoNewXMLResult();
@@ -1320,6 +1636,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link OstatDepoXML }
      * 
+     * @return
+     *     the new instance of {@link OstatDepoXML }
      */
     public OstatDepoXML createOstatDepoXML() {
         return new OstatDepoXML();
@@ -1328,6 +1646,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link OstatDepoXMLResponse.OstatDepoXMLResult }
      * 
+     * @return
+     *     the new instance of {@link OstatDepoXMLResponse.OstatDepoXMLResult }
      */
     public OstatDepoXMLResponse.OstatDepoXMLResult createOstatDepoXMLResponseOstatDepoXMLResult() {
         return new OstatDepoXMLResponse.OstatDepoXMLResult();
@@ -1336,6 +1656,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ValIntDayXML }
      * 
+     * @return
+     *     the new instance of {@link ValIntDayXML }
      */
     public ValIntDayXML createValIntDayXML() {
         return new ValIntDayXML();
@@ -1344,6 +1666,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ValIntDayXMLResponse.ValIntDayXMLResult }
      * 
+     * @return
+     *     the new instance of {@link ValIntDayXMLResponse.ValIntDayXMLResult }
      */
     public ValIntDayXMLResponse.ValIntDayXMLResult createValIntDayXMLResponseValIntDayXMLResult() {
         return new ValIntDayXMLResponse.ValIntDayXMLResult();
@@ -1352,6 +1676,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ValIntDay }
      * 
+     * @return
+     *     the new instance of {@link ValIntDay }
      */
     public ValIntDay createValIntDay() {
         return new ValIntDay();
@@ -1360,6 +1686,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ValIntDayResponse.ValIntDayResult }
      * 
+     * @return
+     *     the new instance of {@link ValIntDayResponse.ValIntDayResult }
      */
     public ValIntDayResponse.ValIntDayResult createValIntDayResponseValIntDayResult() {
         return new ValIntDayResponse.ValIntDayResult();
@@ -1368,6 +1696,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link OstatDepoNew }
      * 
+     * @return
+     *     the new instance of {@link OstatDepoNew }
      */
     public OstatDepoNew createOstatDepoNew() {
         return new OstatDepoNew();
@@ -1376,6 +1706,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link OstatDepoNewResponse.OstatDepoNewResult }
      * 
+     * @return
+     *     the new instance of {@link OstatDepoNewResponse.OstatDepoNewResult }
      */
     public OstatDepoNewResponse.OstatDepoNewResult createOstatDepoNewResponseOstatDepoNewResult() {
         return new OstatDepoNewResponse.OstatDepoNewResult();
@@ -1384,6 +1716,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link OstatDepo }
      * 
+     * @return
+     *     the new instance of {@link OstatDepo }
      */
     public OstatDepo createOstatDepo() {
         return new OstatDepo();
@@ -1392,6 +1726,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link OstatDepoResponse.OstatDepoResult }
      * 
+     * @return
+     *     the new instance of {@link OstatDepoResponse.OstatDepoResult }
      */
     public OstatDepoResponse.OstatDepoResult createOstatDepoResponseOstatDepoResult() {
         return new OstatDepoResponse.OstatDepoResult();
@@ -1400,6 +1736,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ROISfix }
      * 
+     * @return
+     *     the new instance of {@link ROISfix }
      */
     public ROISfix createROISfix() {
         return new ROISfix();
@@ -1408,6 +1746,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link ROISfixResponse.ROISfixResult }
      * 
+     * @return
+     *     the new instance of {@link ROISfixResponse.ROISfixResult }
      */
     public ROISfixResponse.ROISfixResult createROISfixResponseROISfixResult() {
         return new ROISfixResponse.ROISfixResult();
@@ -1416,6 +1756,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Ruonia }
      * 
+     * @return
+     *     the new instance of {@link Ruonia }
      */
     public Ruonia createRuonia() {
         return new Ruonia();
@@ -1424,6 +1766,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link RuoniaResponse.RuoniaResult }
      * 
+     * @return
+     *     the new instance of {@link RuoniaResponse.RuoniaResult }
      */
     public RuoniaResponse.RuoniaResult createRuoniaResponseRuoniaResult() {
         return new RuoniaResponse.RuoniaResult();
@@ -1432,6 +1776,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link RuoniaSV }
      * 
+     * @return
+     *     the new instance of {@link RuoniaSV }
      */
     public RuoniaSV createRuoniaSV() {
         return new RuoniaSV();
@@ -1440,6 +1786,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link RuoniaSVResponse.RuoniaSVResult }
      * 
+     * @return
+     *     the new instance of {@link RuoniaSVResponse.RuoniaSVResult }
      */
     public RuoniaSVResponse.RuoniaSVResult createRuoniaSVResponseRuoniaSVResult() {
         return new RuoniaSVResponse.RuoniaSVResult();
@@ -1448,6 +1796,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link RuoniaSVXML }
      * 
+     * @return
+     *     the new instance of {@link RuoniaSVXML }
      */
     public RuoniaSVXML createRuoniaSVXML() {
         return new RuoniaSVXML();
@@ -1456,6 +1806,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link RuoniaSVXMLResponse.RuoniaSVXMLResult }
      * 
+     * @return
+     *     the new instance of {@link RuoniaSVXMLResponse.RuoniaSVXMLResult }
      */
     public RuoniaSVXMLResponse.RuoniaSVXMLResult createRuoniaSVXMLResponseRuoniaSVXMLResult() {
         return new RuoniaSVXMLResponse.RuoniaSVXMLResult();
@@ -1464,6 +1816,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Mrrf7D }
      * 
+     * @return
+     *     the new instance of {@link Mrrf7D }
      */
     public Mrrf7D createMrrf7D() {
         return new Mrrf7D();
@@ -1472,6 +1826,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Mrrf7DResponse.Mrrf7DResult }
      * 
+     * @return
+     *     the new instance of {@link Mrrf7DResponse.Mrrf7DResult }
      */
     public Mrrf7DResponse.Mrrf7DResult createMrrf7DResponseMrrf7DResult() {
         return new Mrrf7DResponse.Mrrf7DResult();
@@ -1480,6 +1836,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Mrrf7DXML }
      * 
+     * @return
+     *     the new instance of {@link Mrrf7DXML }
      */
     public Mrrf7DXML createMrrf7DXML() {
         return new Mrrf7DXML();
@@ -1488,6 +1846,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Mrrf7DXMLResponse.Mrrf7DXMLResult }
      * 
+     * @return
+     *     the new instance of {@link Mrrf7DXMLResponse.Mrrf7DXMLResult }
      */
     public Mrrf7DXMLResponse.Mrrf7DXMLResult createMrrf7DXMLResponseMrrf7DXMLResult() {
         return new Mrrf7DXMLResponse.Mrrf7DXMLResult();
@@ -1496,6 +1856,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link RepoDebtUSD }
      * 
+     * @return
+     *     the new instance of {@link RepoDebtUSD }
      */
     public RepoDebtUSD createRepoDebtUSD() {
         return new RepoDebtUSD();
@@ -1504,6 +1866,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link RepoDebtUSDResponse.RepoDebtUSDResult }
      * 
+     * @return
+     *     the new instance of {@link RepoDebtUSDResponse.RepoDebtUSDResult }
      */
     public RepoDebtUSDResponse.RepoDebtUSDResult createRepoDebtUSDResponseRepoDebtUSDResult() {
         return new RepoDebtUSDResponse.RepoDebtUSDResult();
@@ -1512,6 +1876,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link RepoDebtUSDXML }
      * 
+     * @return
+     *     the new instance of {@link RepoDebtUSDXML }
      */
     public RepoDebtUSDXML createRepoDebtUSDXML() {
         return new RepoDebtUSDXML();
@@ -1520,6 +1886,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link RepoDebtUSDXMLResponse.RepoDebtUSDXMLResult }
      * 
+     * @return
+     *     the new instance of {@link RepoDebtUSDXMLResponse.RepoDebtUSDXMLResult }
      */
     public RepoDebtUSDXMLResponse.RepoDebtUSDXMLResult createRepoDebtUSDXMLResponseRepoDebtUSDXMLResult() {
         return new RepoDebtUSDXMLResponse.RepoDebtUSDXMLResult();
@@ -1528,6 +1896,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Mrrf }
      * 
+     * @return
+     *     the new instance of {@link Mrrf }
      */
     public Mrrf createMrrf() {
         return new Mrrf();
@@ -1536,6 +1906,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link MrrfResponse.MrrfResult }
      * 
+     * @return
+     *     the new instance of {@link MrrfResponse.MrrfResult }
      */
     public MrrfResponse.MrrfResult createMrrfResponseMrrfResult() {
         return new MrrfResponse.MrrfResult();
@@ -1544,6 +1916,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link MrrfXML }
      * 
+     * @return
+     *     the new instance of {@link MrrfXML }
      */
     public MrrfXML createMrrfXML() {
         return new MrrfXML();
@@ -1552,6 +1926,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link MrrfXMLResponse.MrrfXMLResult }
      * 
+     * @return
+     *     the new instance of {@link MrrfXMLResponse.MrrfXMLResult }
      */
     public MrrfXMLResponse.MrrfXMLResult createMrrfXMLResponseMrrfXMLResult() {
         return new MrrfXMLResponse.MrrfXMLResult();
@@ -1560,6 +1936,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Saldo }
      * 
+     * @return
+     *     the new instance of {@link Saldo }
      */
     public Saldo createSaldo() {
         return new Saldo();
@@ -1568,6 +1946,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SaldoResponse.SaldoResult }
      * 
+     * @return
+     *     the new instance of {@link SaldoResponse.SaldoResult }
      */
     public SaldoResponse.SaldoResult createSaldoResponseSaldoResult() {
         return new SaldoResponse.SaldoResult();
@@ -1576,6 +1956,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link NewsInfoXML }
      * 
+     * @return
+     *     the new instance of {@link NewsInfoXML }
      */
     public NewsInfoXML createNewsInfoXML() {
         return new NewsInfoXML();
@@ -1584,6 +1966,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link NewsInfoXMLResponse.NewsInfoXMLResult }
      * 
+     * @return
+     *     the new instance of {@link NewsInfoXMLResponse.NewsInfoXMLResult }
      */
     public NewsInfoXMLResponse.NewsInfoXMLResult createNewsInfoXMLResponseNewsInfoXMLResult() {
         return new NewsInfoXMLResponse.NewsInfoXMLResult();
@@ -1592,6 +1976,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link OmodInfoXML }
      * 
+     * @return
+     *     the new instance of {@link OmodInfoXML }
      */
     public OmodInfoXML createOmodInfoXML() {
         return new OmodInfoXML();
@@ -1600,6 +1986,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link OmodInfoXMLResponse.OmodInfoXMLResult }
      * 
+     * @return
+     *     the new instance of {@link OmodInfoXMLResponse.OmodInfoXMLResult }
      */
     public OmodInfoXMLResponse.OmodInfoXMLResult createOmodInfoXMLResponseOmodInfoXMLResult() {
         return new OmodInfoXMLResponse.OmodInfoXMLResult();
@@ -1608,6 +1996,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link XVol }
      * 
+     * @return
+     *     the new instance of {@link XVol }
      */
     public XVol createXVol() {
         return new XVol();
@@ -1616,6 +2006,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link XVolResponse.XVolResult }
      * 
+     * @return
+     *     the new instance of {@link XVolResponse.XVolResult }
      */
     public XVolResponse.XVolResult createXVolResponseXVolResult() {
         return new XVolResponse.XVolResult();
@@ -1624,6 +2016,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link XVolXML }
      * 
+     * @return
+     *     the new instance of {@link XVolXML }
      */
     public XVolXML createXVolXML() {
         return new XVolXML();
@@ -1632,6 +2026,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link XVolXMLResponse.XVolXMLResult }
      * 
+     * @return
+     *     the new instance of {@link XVolXMLResponse.XVolXMLResult }
      */
     public XVolXMLResponse.XVolXMLResult createXVolXMLResponseXVolXMLResult() {
         return new XVolXMLResponse.XVolXMLResult();
@@ -1640,6 +2036,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link MainInfoXML }
      * 
+     * @return
+     *     the new instance of {@link MainInfoXML }
      */
     public MainInfoXML createMainInfoXML() {
         return new MainInfoXML();
@@ -1648,6 +2046,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link MainInfoXMLResponse.MainInfoXMLResult }
      * 
+     * @return
+     *     the new instance of {@link MainInfoXMLResponse.MainInfoXMLResult }
      */
     public MainInfoXMLResponse.MainInfoXMLResult createMainInfoXMLResponseMainInfoXMLResult() {
         return new MainInfoXMLResponse.MainInfoXMLResult();
@@ -1656,6 +2056,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link AllDataInfoXML }
      * 
+     * @return
+     *     the new instance of {@link AllDataInfoXML }
      */
     public AllDataInfoXML createAllDataInfoXML() {
         return new AllDataInfoXML();
@@ -1664,6 +2066,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link AllDataInfoXMLResponse.AllDataInfoXMLResult }
      * 
+     * @return
+     *     the new instance of {@link AllDataInfoXMLResponse.AllDataInfoXMLResult }
      */
     public AllDataInfoXMLResponse.AllDataInfoXMLResult createAllDataInfoXMLResponseAllDataInfoXMLResult() {
         return new AllDataInfoXMLResponse.AllDataInfoXMLResult();
@@ -1672,6 +2076,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link NewsInfo }
      * 
+     * @return
+     *     the new instance of {@link NewsInfo }
      */
     public NewsInfo createNewsInfo() {
         return new NewsInfo();
@@ -1680,6 +2086,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link NewsInfoResponse.NewsInfoResult }
      * 
+     * @return
+     *     the new instance of {@link NewsInfoResponse.NewsInfoResult }
      */
     public NewsInfoResponse.NewsInfoResult createNewsInfoResponseNewsInfoResult() {
         return new NewsInfoResponse.NewsInfoResult();
@@ -1688,6 +2096,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapDayTotal }
      * 
+     * @return
+     *     the new instance of {@link SwapDayTotal }
      */
     public SwapDayTotal createSwapDayTotal() {
         return new SwapDayTotal();
@@ -1696,6 +2106,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapDayTotalResponse.SwapDayTotalResult }
      * 
+     * @return
+     *     the new instance of {@link SwapDayTotalResponse.SwapDayTotalResult }
      */
     public SwapDayTotalResponse.SwapDayTotalResult createSwapDayTotalResponseSwapDayTotalResult() {
         return new SwapDayTotalResponse.SwapDayTotalResult();
@@ -1704,6 +2116,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapDayTotalXML }
      * 
+     * @return
+     *     the new instance of {@link SwapDayTotalXML }
      */
     public SwapDayTotalXML createSwapDayTotalXML() {
         return new SwapDayTotalXML();
@@ -1712,6 +2126,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapDayTotalXMLResponse.SwapDayTotalXMLResult }
      * 
+     * @return
+     *     the new instance of {@link SwapDayTotalXMLResponse.SwapDayTotalXMLResult }
      */
     public SwapDayTotalXMLResponse.SwapDayTotalXMLResult createSwapDayTotalXMLResponseSwapDayTotalXMLResult() {
         return new SwapDayTotalXMLResponse.SwapDayTotalXMLResult();
@@ -1720,6 +2136,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapDynamicXML }
      * 
+     * @return
+     *     the new instance of {@link SwapDynamicXML }
      */
     public SwapDynamicXML createSwapDynamicXML() {
         return new SwapDynamicXML();
@@ -1728,6 +2146,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapDynamicXMLResponse.SwapDynamicXMLResult }
      * 
+     * @return
+     *     the new instance of {@link SwapDynamicXMLResponse.SwapDynamicXMLResult }
      */
     public SwapDynamicXMLResponse.SwapDynamicXMLResult createSwapDynamicXMLResponseSwapDynamicXMLResult() {
         return new SwapDynamicXMLResponse.SwapDynamicXMLResult();
@@ -1736,6 +2156,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapInfoSellUSDVolXML }
      * 
+     * @return
+     *     the new instance of {@link SwapInfoSellUSDVolXML }
      */
     public SwapInfoSellUSDVolXML createSwapInfoSellUSDVolXML() {
         return new SwapInfoSellUSDVolXML();
@@ -1744,6 +2166,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapInfoSellUSDVolXMLResponse.SwapInfoSellUSDVolXMLResult }
      * 
+     * @return
+     *     the new instance of {@link SwapInfoSellUSDVolXMLResponse.SwapInfoSellUSDVolXMLResult }
      */
     public SwapInfoSellUSDVolXMLResponse.SwapInfoSellUSDVolXMLResult createSwapInfoSellUSDVolXMLResponseSwapInfoSellUSDVolXMLResult() {
         return new SwapInfoSellUSDVolXMLResponse.SwapInfoSellUSDVolXMLResult();
@@ -1752,6 +2176,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapInfoSellUSDVol }
      * 
+     * @return
+     *     the new instance of {@link SwapInfoSellUSDVol }
      */
     public SwapInfoSellUSDVol createSwapInfoSellUSDVol() {
         return new SwapInfoSellUSDVol();
@@ -1760,6 +2186,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapInfoSellUSDVolResponse.SwapInfoSellUSDVolResult }
      * 
+     * @return
+     *     the new instance of {@link SwapInfoSellUSDVolResponse.SwapInfoSellUSDVolResult }
      */
     public SwapInfoSellUSDVolResponse.SwapInfoSellUSDVolResult createSwapInfoSellUSDVolResponseSwapInfoSellUSDVolResult() {
         return new SwapInfoSellUSDVolResponse.SwapInfoSellUSDVolResult();
@@ -1768,6 +2196,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapInfoSellVolXML }
      * 
+     * @return
+     *     the new instance of {@link SwapInfoSellVolXML }
      */
     public SwapInfoSellVolXML createSwapInfoSellVolXML() {
         return new SwapInfoSellVolXML();
@@ -1776,6 +2206,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapInfoSellVolXMLResponse.SwapInfoSellVolXMLResult }
      * 
+     * @return
+     *     the new instance of {@link SwapInfoSellVolXMLResponse.SwapInfoSellVolXMLResult }
      */
     public SwapInfoSellVolXMLResponse.SwapInfoSellVolXMLResult createSwapInfoSellVolXMLResponseSwapInfoSellVolXMLResult() {
         return new SwapInfoSellVolXMLResponse.SwapInfoSellVolXMLResult();
@@ -1784,6 +2216,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapInfoSellVol }
      * 
+     * @return
+     *     the new instance of {@link SwapInfoSellVol }
      */
     public SwapInfoSellVol createSwapInfoSellVol() {
         return new SwapInfoSellVol();
@@ -1792,6 +2226,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapInfoSellVolResponse.SwapInfoSellVolResult }
      * 
+     * @return
+     *     the new instance of {@link SwapInfoSellVolResponse.SwapInfoSellVolResult }
      */
     public SwapInfoSellVolResponse.SwapInfoSellVolResult createSwapInfoSellVolResponseSwapInfoSellVolResult() {
         return new SwapInfoSellVolResponse.SwapInfoSellVolResult();
@@ -1800,6 +2236,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapInfoSellUSD }
      * 
+     * @return
+     *     the new instance of {@link SwapInfoSellUSD }
      */
     public SwapInfoSellUSD createSwapInfoSellUSD() {
         return new SwapInfoSellUSD();
@@ -1808,6 +2246,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapInfoSellUSDResponse.SwapInfoSellUSDResult }
      * 
+     * @return
+     *     the new instance of {@link SwapInfoSellUSDResponse.SwapInfoSellUSDResult }
      */
     public SwapInfoSellUSDResponse.SwapInfoSellUSDResult createSwapInfoSellUSDResponseSwapInfoSellUSDResult() {
         return new SwapInfoSellUSDResponse.SwapInfoSellUSDResult();
@@ -1816,6 +2256,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapInfoSellUSDXML }
      * 
+     * @return
+     *     the new instance of {@link SwapInfoSellUSDXML }
      */
     public SwapInfoSellUSDXML createSwapInfoSellUSDXML() {
         return new SwapInfoSellUSDXML();
@@ -1824,6 +2266,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapInfoSellUSDXMLResponse.SwapInfoSellUSDXMLResult }
      * 
+     * @return
+     *     the new instance of {@link SwapInfoSellUSDXMLResponse.SwapInfoSellUSDXMLResult }
      */
     public SwapInfoSellUSDXMLResponse.SwapInfoSellUSDXMLResult createSwapInfoSellUSDXMLResponseSwapInfoSellUSDXMLResult() {
         return new SwapInfoSellUSDXMLResponse.SwapInfoSellUSDXMLResult();
@@ -1832,6 +2276,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapInfoSell }
      * 
+     * @return
+     *     the new instance of {@link SwapInfoSell }
      */
     public SwapInfoSell createSwapInfoSell() {
         return new SwapInfoSell();
@@ -1840,6 +2286,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapInfoSellResponse.SwapInfoSellResult }
      * 
+     * @return
+     *     the new instance of {@link SwapInfoSellResponse.SwapInfoSellResult }
      */
     public SwapInfoSellResponse.SwapInfoSellResult createSwapInfoSellResponseSwapInfoSellResult() {
         return new SwapInfoSellResponse.SwapInfoSellResult();
@@ -1848,6 +2296,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapInfoSellXML }
      * 
+     * @return
+     *     the new instance of {@link SwapInfoSellXML }
      */
     public SwapInfoSellXML createSwapInfoSellXML() {
         return new SwapInfoSellXML();
@@ -1856,6 +2306,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapInfoSellXMLResponse.SwapInfoSellXMLResult }
      * 
+     * @return
+     *     the new instance of {@link SwapInfoSellXMLResponse.SwapInfoSellXMLResult }
      */
     public SwapInfoSellXMLResponse.SwapInfoSellXMLResult createSwapInfoSellXMLResponseSwapInfoSellXMLResult() {
         return new SwapInfoSellXMLResponse.SwapInfoSellXMLResult();
@@ -1864,6 +2316,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Bliquidity }
      * 
+     * @return
+     *     the new instance of {@link Bliquidity }
      */
     public Bliquidity createBliquidity() {
         return new Bliquidity();
@@ -1872,6 +2326,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link BliquidityResponse.BliquidityResult }
      * 
+     * @return
+     *     the new instance of {@link BliquidityResponse.BliquidityResult }
      */
     public BliquidityResponse.BliquidityResult createBliquidityResponseBliquidityResult() {
         return new BliquidityResponse.BliquidityResult();
@@ -1880,6 +2336,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link BliquidityXML }
      * 
+     * @return
+     *     the new instance of {@link BliquidityXML }
      */
     public BliquidityXML createBliquidityXML() {
         return new BliquidityXML();
@@ -1888,6 +2346,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link BliquidityXMLResponse.BliquidityXMLResult }
      * 
+     * @return
+     *     the new instance of {@link BliquidityXMLResponse.BliquidityXMLResult }
      */
     public BliquidityXMLResponse.BliquidityXMLResult createBliquidityXMLResponseBliquidityXMLResult() {
         return new BliquidityXMLResponse.BliquidityXMLResult();
@@ -1896,6 +2356,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link BiCurBaseXML }
      * 
+     * @return
+     *     the new instance of {@link BiCurBaseXML }
      */
     public BiCurBaseXML createBiCurBaseXML() {
         return new BiCurBaseXML();
@@ -1904,6 +2366,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link BiCurBaseXMLResponse.BiCurBaseXMLResult }
      * 
+     * @return
+     *     the new instance of {@link BiCurBaseXMLResponse.BiCurBaseXMLResult }
      */
     public BiCurBaseXMLResponse.BiCurBaseXMLResult createBiCurBaseXMLResponseBiCurBaseXMLResult() {
         return new BiCurBaseXMLResponse.BiCurBaseXMLResult();
@@ -1912,6 +2376,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link BiCurBase }
      * 
+     * @return
+     *     the new instance of {@link BiCurBase }
      */
     public BiCurBase createBiCurBase() {
         return new BiCurBase();
@@ -1920,6 +2386,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link BiCurBaseResponse.BiCurBaseResult }
      * 
+     * @return
+     *     the new instance of {@link BiCurBaseResponse.BiCurBaseResult }
      */
     public BiCurBaseResponse.BiCurBaseResult createBiCurBaseResponseBiCurBaseResult() {
         return new BiCurBaseResponse.BiCurBaseResult();
@@ -1928,6 +2396,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link BiCurBacketXML }
      * 
+     * @return
+     *     the new instance of {@link BiCurBacketXML }
      */
     public BiCurBacketXML createBiCurBacketXML() {
         return new BiCurBacketXML();
@@ -1936,6 +2406,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link BiCurBacketXMLResponse.BiCurBacketXMLResult }
      * 
+     * @return
+     *     the new instance of {@link BiCurBacketXMLResponse.BiCurBacketXMLResult }
      */
     public BiCurBacketXMLResponse.BiCurBacketXMLResult createBiCurBacketXMLResponseBiCurBacketXMLResult() {
         return new BiCurBacketXMLResponse.BiCurBacketXMLResult();
@@ -1944,6 +2416,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link BiCurBacket }
      * 
+     * @return
+     *     the new instance of {@link BiCurBacket }
      */
     public BiCurBacket createBiCurBacket() {
         return new BiCurBacket();
@@ -1952,6 +2426,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link BiCurBacketResponse.BiCurBacketResult }
      * 
+     * @return
+     *     the new instance of {@link BiCurBacketResponse.BiCurBacketResult }
      */
     public BiCurBacketResponse.BiCurBacketResult createBiCurBacketResponseBiCurBacketResult() {
         return new BiCurBacketResponse.BiCurBacketResult();
@@ -1960,6 +2436,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapDynamic }
      * 
+     * @return
+     *     the new instance of {@link SwapDynamic }
      */
     public SwapDynamic createSwapDynamic() {
         return new SwapDynamic();
@@ -1968,6 +2446,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapDynamicResponse.SwapDynamicResult }
      * 
+     * @return
+     *     the new instance of {@link SwapDynamicResponse.SwapDynamicResult }
      */
     public SwapDynamicResponse.SwapDynamicResult createSwapDynamicResponseSwapDynamicResult() {
         return new SwapDynamicResponse.SwapDynamicResult();
@@ -1976,6 +2456,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapMonthTotal }
      * 
+     * @return
+     *     the new instance of {@link SwapMonthTotal }
      */
     public SwapMonthTotal createSwapMonthTotal() {
         return new SwapMonthTotal();
@@ -1984,6 +2466,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapMonthTotalResponse.SwapMonthTotalResult }
      * 
+     * @return
+     *     the new instance of {@link SwapMonthTotalResponse.SwapMonthTotalResult }
      */
     public SwapMonthTotalResponse.SwapMonthTotalResult createSwapMonthTotalResponseSwapMonthTotalResult() {
         return new SwapMonthTotalResponse.SwapMonthTotalResult();
@@ -1992,6 +2476,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapMonthTotalXML }
      * 
+     * @return
+     *     the new instance of {@link SwapMonthTotalXML }
      */
     public SwapMonthTotalXML createSwapMonthTotalXML() {
         return new SwapMonthTotalXML();
@@ -2000,6 +2486,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SwapMonthTotalXMLResponse.SwapMonthTotalXMLResult }
      * 
+     * @return
+     *     the new instance of {@link SwapMonthTotalXMLResponse.SwapMonthTotalXMLResult }
      */
     public SwapMonthTotalXMLResponse.SwapMonthTotalXMLResult createSwapMonthTotalXMLResponseSwapMonthTotalXMLResult() {
         return new SwapMonthTotalXMLResponse.SwapMonthTotalXMLResult();
@@ -2008,6 +2496,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link MKR }
      * 
+     * @return
+     *     the new instance of {@link MKR }
      */
     public MKR createMKR() {
         return new MKR();
@@ -2016,6 +2506,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link MKRResponse.MKRResult }
      * 
+     * @return
+     *     the new instance of {@link MKRResponse.MKRResult }
      */
     public MKRResponse.MKRResult createMKRResponseMKRResult() {
         return new MKRResponse.MKRResult();
@@ -2024,6 +2516,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link MKRXML }
      * 
+     * @return
+     *     the new instance of {@link MKRXML }
      */
     public MKRXML createMKRXML() {
         return new MKRXML();
@@ -2032,6 +2526,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link MKRXMLResponse.MKRXMLResult }
      * 
+     * @return
+     *     the new instance of {@link MKRXMLResponse.MKRXMLResult }
      */
     public MKRXMLResponse.MKRXMLResult createMKRXMLResponseMKRXMLResult() {
         return new MKRXMLResponse.MKRXMLResult();
@@ -2040,6 +2536,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link KeyRate }
      * 
+     * @return
+     *     the new instance of {@link KeyRate }
      */
     public KeyRate createKeyRate() {
         return new KeyRate();
@@ -2048,6 +2546,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link KeyRateResponse.KeyRateResult }
      * 
+     * @return
+     *     the new instance of {@link KeyRateResponse.KeyRateResult }
      */
     public KeyRateResponse.KeyRateResult createKeyRateResponseKeyRateResult() {
         return new KeyRateResponse.KeyRateResult();
@@ -2056,6 +2556,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link KeyRateXML }
      * 
+     * @return
+     *     the new instance of {@link KeyRateXML }
      */
     public KeyRateXML createKeyRateXML() {
         return new KeyRateXML();
@@ -2064,6 +2566,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link KeyRateXMLResponse.KeyRateXMLResult }
      * 
+     * @return
+     *     the new instance of {@link KeyRateXMLResponse.KeyRateXMLResult }
      */
     public KeyRateXMLResponse.KeyRateXMLResult createKeyRateXMLResponseKeyRateXMLResult() {
         return new KeyRateXMLResponse.KeyRateXMLResult();
@@ -2072,6 +2576,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link DV }
      * 
+     * @return
+     *     the new instance of {@link DV }
      */
     public DV createDV() {
         return new DV();
@@ -2080,6 +2586,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link DVResponse.DVResult }
      * 
+     * @return
+     *     the new instance of {@link DVResponse.DVResult }
      */
     public DVResponse.DVResult createDVResponseDVResult() {
         return new DVResponse.DVResult();
@@ -2088,6 +2596,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link DVXML }
      * 
+     * @return
+     *     the new instance of {@link DVXML }
      */
     public DVXML createDVXML() {
         return new DVXML();
@@ -2096,6 +2606,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link DVXMLResponse.DVXMLResult }
      * 
+     * @return
+     *     the new instance of {@link DVXMLResponse.DVXMLResult }
      */
     public DVXMLResponse.DVXMLResult createDVXMLResponseDVXMLResult() {
         return new DVXMLResponse.DVXMLResult();
@@ -2104,6 +2616,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link RepoDebt }
      * 
+     * @return
+     *     the new instance of {@link RepoDebt }
      */
     public RepoDebt createRepoDebt() {
         return new RepoDebt();
@@ -2112,6 +2626,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link RepoDebtResponse.RepoDebtResult }
      * 
+     * @return
+     *     the new instance of {@link RepoDebtResponse.RepoDebtResult }
      */
     public RepoDebtResponse.RepoDebtResult createRepoDebtResponseRepoDebtResult() {
         return new RepoDebtResponse.RepoDebtResult();
@@ -2120,6 +2636,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link RepoDebtXML }
      * 
+     * @return
+     *     the new instance of {@link RepoDebtXML }
      */
     public RepoDebtXML createRepoDebtXML() {
         return new RepoDebtXML();
@@ -2128,6 +2646,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link RepoDebtXMLResponse.RepoDebtXMLResult }
      * 
+     * @return
+     *     the new instance of {@link RepoDebtXMLResponse.RepoDebtXMLResult }
      */
     public RepoDebtXMLResponse.RepoDebtXMLResult createRepoDebtXMLResponseRepoDebtXMLResult() {
         return new RepoDebtXMLResponse.RepoDebtXMLResult();
@@ -2136,6 +2656,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link CoinsBase }
      * 
+     * @return
+     *     the new instance of {@link CoinsBase }
      */
     public CoinsBase createCoinsBase() {
         return new CoinsBase();
@@ -2144,6 +2666,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link CoinsBaseResponse.CoinsBaseResult }
      * 
+     * @return
+     *     the new instance of {@link CoinsBaseResponse.CoinsBaseResult }
      */
     public CoinsBaseResponse.CoinsBaseResult createCoinsBaseResponseCoinsBaseResult() {
         return new CoinsBaseResponse.CoinsBaseResult();
@@ -2152,6 +2676,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link CoinsBaseXML }
      * 
+     * @return
+     *     the new instance of {@link CoinsBaseXML }
      */
     public CoinsBaseXML createCoinsBaseXML() {
         return new CoinsBaseXML();
@@ -2160,6 +2686,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link CoinsBaseXMLResponse.CoinsBaseXMLResult }
      * 
+     * @return
+     *     the new instance of {@link CoinsBaseXMLResponse.CoinsBaseXMLResult }
      */
     public CoinsBaseXMLResponse.CoinsBaseXMLResult createCoinsBaseXMLResponseCoinsBaseXMLResult() {
         return new CoinsBaseXMLResponse.CoinsBaseXMLResult();
@@ -2168,6 +2696,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link FixingBase }
      * 
+     * @return
+     *     the new instance of {@link FixingBase }
      */
     public FixingBase createFixingBase() {
         return new FixingBase();
@@ -2176,6 +2706,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link FixingBaseResponse.FixingBaseResult }
      * 
+     * @return
+     *     the new instance of {@link FixingBaseResponse.FixingBaseResult }
      */
     public FixingBaseResponse.FixingBaseResult createFixingBaseResponseFixingBaseResult() {
         return new FixingBaseResponse.FixingBaseResult();
@@ -2184,6 +2716,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link FixingBaseXML }
      * 
+     * @return
+     *     the new instance of {@link FixingBaseXML }
      */
     public FixingBaseXML createFixingBaseXML() {
         return new FixingBaseXML();
@@ -2192,6 +2726,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link FixingBaseXMLResponse.FixingBaseXMLResult }
      * 
+     * @return
+     *     the new instance of {@link FixingBaseXMLResponse.FixingBaseXMLResult }
      */
     public FixingBaseXMLResponse.FixingBaseXMLResult createFixingBaseXMLResponseFixingBaseXMLResult() {
         return new FixingBaseXMLResponse.FixingBaseXMLResult();
@@ -2200,6 +2736,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Overnight }
      * 
+     * @return
+     *     the new instance of {@link Overnight }
      */
     public Overnight createOvernight() {
         return new Overnight();
@@ -2208,6 +2746,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link OvernightResponse.OvernightResult }
      * 
+     * @return
+     *     the new instance of {@link OvernightResponse.OvernightResult }
      */
     public OvernightResponse.OvernightResult createOvernightResponseOvernightResult() {
         return new OvernightResponse.OvernightResult();
@@ -2216,6 +2756,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link OvernightXML }
      * 
+     * @return
+     *     the new instance of {@link OvernightXML }
      */
     public OvernightXML createOvernightXML() {
         return new OvernightXML();
@@ -2224,6 +2766,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link OvernightXMLResponse.OvernightXMLResult }
      * 
+     * @return
+     *     the new instance of {@link OvernightXMLResponse.OvernightXMLResult }
      */
     public OvernightXMLResponse.OvernightXMLResult createOvernightXMLResponseOvernightXMLResult() {
         return new OvernightXMLResponse.OvernightXMLResult();
@@ -2232,6 +2776,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Bauction }
      * 
+     * @return
+     *     the new instance of {@link Bauction }
      */
     public Bauction createBauction() {
         return new Bauction();
@@ -2240,6 +2786,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link BauctionResponse.BauctionResult }
      * 
+     * @return
+     *     the new instance of {@link BauctionResponse.BauctionResult }
      */
     public BauctionResponse.BauctionResult createBauctionResponseBauctionResult() {
         return new BauctionResponse.BauctionResult();
@@ -2248,6 +2796,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link BauctionXML }
      * 
+     * @return
+     *     the new instance of {@link BauctionXML }
      */
     public BauctionXML createBauctionXML() {
         return new BauctionXML();
@@ -2256,6 +2806,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link BauctionXMLResponse.BauctionXMLResult }
      * 
+     * @return
+     *     the new instance of {@link BauctionXMLResponse.BauctionXMLResult }
      */
     public BauctionXMLResponse.BauctionXMLResult createBauctionXMLResponseBauctionXMLResult() {
         return new BauctionXMLResponse.BauctionXMLResult();
@@ -2264,6 +2816,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link DepoDynamicXML }
      * 
+     * @return
+     *     the new instance of {@link DepoDynamicXML }
      */
     public DepoDynamicXML createDepoDynamicXML() {
         return new DepoDynamicXML();
@@ -2272,6 +2826,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link DepoDynamicXMLResponse.DepoDynamicXMLResult }
      * 
+     * @return
+     *     the new instance of {@link DepoDynamicXMLResponse.DepoDynamicXMLResult }
      */
     public DepoDynamicXMLResponse.DepoDynamicXMLResult createDepoDynamicXMLResponseDepoDynamicXMLResult() {
         return new DepoDynamicXMLResponse.DepoDynamicXMLResult();
@@ -2280,6 +2836,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link DepoDynamic }
      * 
+     * @return
+     *     the new instance of {@link DepoDynamic }
      */
     public DepoDynamic createDepoDynamic() {
         return new DepoDynamic();
@@ -2288,6 +2846,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link DepoDynamicResponse.DepoDynamicResult }
      * 
+     * @return
+     *     the new instance of {@link DepoDynamicResponse.DepoDynamicResult }
      */
     public DepoDynamicResponse.DepoDynamicResult createDepoDynamicResponseDepoDynamicResult() {
         return new DepoDynamicResponse.DepoDynamicResult();
@@ -2296,6 +2856,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link OstatDynamicXML }
      * 
+     * @return
+     *     the new instance of {@link OstatDynamicXML }
      */
     public OstatDynamicXML createOstatDynamicXML() {
         return new OstatDynamicXML();
@@ -2304,6 +2866,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link OstatDynamicXMLResponse.OstatDynamicXMLResult }
      * 
+     * @return
+     *     the new instance of {@link OstatDynamicXMLResponse.OstatDynamicXMLResult }
      */
     public OstatDynamicXMLResponse.OstatDynamicXMLResult createOstatDynamicXMLResponseOstatDynamicXMLResult() {
         return new OstatDynamicXMLResponse.OstatDynamicXMLResult();
@@ -2312,6 +2876,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link OstatDynamic }
      * 
+     * @return
+     *     the new instance of {@link OstatDynamic }
      */
     public OstatDynamic createOstatDynamic() {
         return new OstatDynamic();
@@ -2320,6 +2886,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link OstatDynamicResponse.OstatDynamicResult }
      * 
+     * @return
+     *     the new instance of {@link OstatDynamicResponse.OstatDynamicResult }
      */
     public OstatDynamicResponse.OstatDynamicResult createOstatDynamicResponseOstatDynamicResult() {
         return new OstatDynamicResponse.OstatDynamicResult();
@@ -2328,6 +2896,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link DragMetDynamicXML }
      * 
+     * @return
+     *     the new instance of {@link DragMetDynamicXML }
      */
     public DragMetDynamicXML createDragMetDynamicXML() {
         return new DragMetDynamicXML();
@@ -2336,6 +2906,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link DragMetDynamicXMLResponse.DragMetDynamicXMLResult }
      * 
+     * @return
+     *     the new instance of {@link DragMetDynamicXMLResponse.DragMetDynamicXMLResult }
      */
     public DragMetDynamicXMLResponse.DragMetDynamicXMLResult createDragMetDynamicXMLResponseDragMetDynamicXMLResult() {
         return new DragMetDynamicXMLResponse.DragMetDynamicXMLResult();
@@ -2344,6 +2916,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link DragMetDynamic }
      * 
+     * @return
+     *     the new instance of {@link DragMetDynamic }
      */
     public DragMetDynamic createDragMetDynamic() {
         return new DragMetDynamic();
@@ -2352,6 +2926,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link DragMetDynamicResponse.DragMetDynamicResult }
      * 
+     * @return
+     *     the new instance of {@link DragMetDynamicResponse.DragMetDynamicResult }
      */
     public DragMetDynamicResponse.DragMetDynamicResult createDragMetDynamicResponseDragMetDynamicResult() {
         return new DragMetDynamicResponse.DragMetDynamicResult();
@@ -2360,6 +2936,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetLatestDateTime }
      * 
+     * @return
+     *     the new instance of {@link GetLatestDateTime }
      */
     public GetLatestDateTime createGetLatestDateTime() {
         return new GetLatestDateTime();
@@ -2368,6 +2946,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetLatestDateTimeResponse }
      * 
+     * @return
+     *     the new instance of {@link GetLatestDateTimeResponse }
      */
     public GetLatestDateTimeResponse createGetLatestDateTimeResponse() {
         return new GetLatestDateTimeResponse();
@@ -2376,6 +2956,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetLatestDate }
      * 
+     * @return
+     *     the new instance of {@link GetLatestDate }
      */
     public GetLatestDate createGetLatestDate() {
         return new GetLatestDate();
@@ -2384,6 +2966,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetLatestDateResponse }
      * 
+     * @return
+     *     the new instance of {@link GetLatestDateResponse }
      */
     public GetLatestDateResponse createGetLatestDateResponse() {
         return new GetLatestDateResponse();
@@ -2392,6 +2976,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetLatestDateTimeSeld }
      * 
+     * @return
+     *     the new instance of {@link GetLatestDateTimeSeld }
      */
     public GetLatestDateTimeSeld createGetLatestDateTimeSeld() {
         return new GetLatestDateTimeSeld();
@@ -2400,6 +2986,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetLatestDateTimeSeldResponse }
      * 
+     * @return
+     *     the new instance of {@link GetLatestDateTimeSeldResponse }
      */
     public GetLatestDateTimeSeldResponse createGetLatestDateTimeSeldResponse() {
         return new GetLatestDateTimeSeldResponse();
@@ -2408,6 +2996,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetLatestDateSeld }
      * 
+     * @return
+     *     the new instance of {@link GetLatestDateSeld }
      */
     public GetLatestDateSeld createGetLatestDateSeld() {
         return new GetLatestDateSeld();
@@ -2416,6 +3006,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetLatestDateSeldResponse }
      * 
+     * @return
+     *     the new instance of {@link GetLatestDateSeldResponse }
      */
     public GetLatestDateSeldResponse createGetLatestDateSeldResponse() {
         return new GetLatestDateSeldResponse();
@@ -2424,6 +3016,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link EnumValutesXML }
      * 
+     * @return
+     *     the new instance of {@link EnumValutesXML }
      */
     public EnumValutesXML createEnumValutesXML() {
         return new EnumValutesXML();
@@ -2432,6 +3026,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link EnumValutesXMLResponse.EnumValutesXMLResult }
      * 
+     * @return
+     *     the new instance of {@link EnumValutesXMLResponse.EnumValutesXMLResult }
      */
     public EnumValutesXMLResponse.EnumValutesXMLResult createEnumValutesXMLResponseEnumValutesXMLResult() {
         return new EnumValutesXMLResponse.EnumValutesXMLResult();
@@ -2440,6 +3036,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link EnumValutes }
      * 
+     * @return
+     *     the new instance of {@link EnumValutes }
      */
     public EnumValutes createEnumValutes() {
         return new EnumValutes();
@@ -2448,6 +3046,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link EnumValutesResponse.EnumValutesResult }
      * 
+     * @return
+     *     the new instance of {@link EnumValutesResponse.EnumValutesResult }
      */
     public EnumValutesResponse.EnumValutesResult createEnumValutesResponseEnumValutesResult() {
         return new EnumValutesResponse.EnumValutesResult();
@@ -2456,6 +3056,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetLatestReutersDateTime }
      * 
+     * @return
+     *     the new instance of {@link GetLatestReutersDateTime }
      */
     public GetLatestReutersDateTime createGetLatestReutersDateTime() {
         return new GetLatestReutersDateTime();
@@ -2464,6 +3066,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetLatestReutersDateTimeResponse }
      * 
+     * @return
+     *     the new instance of {@link GetLatestReutersDateTimeResponse }
      */
     public GetLatestReutersDateTimeResponse createGetLatestReutersDateTimeResponse() {
         return new GetLatestReutersDateTimeResponse();
@@ -2472,6 +3076,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link EnumReutersValutesXML }
      * 
+     * @return
+     *     the new instance of {@link EnumReutersValutesXML }
      */
     public EnumReutersValutesXML createEnumReutersValutesXML() {
         return new EnumReutersValutesXML();
@@ -2480,6 +3086,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link EnumReutersValutesXMLResponse.EnumReutersValutesXMLResult }
      * 
+     * @return
+     *     the new instance of {@link EnumReutersValutesXMLResponse.EnumReutersValutesXMLResult }
      */
     public EnumReutersValutesXMLResponse.EnumReutersValutesXMLResult createEnumReutersValutesXMLResponseEnumReutersValutesXMLResult() {
         return new EnumReutersValutesXMLResponse.EnumReutersValutesXMLResult();
@@ -2488,6 +3096,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link EnumReutersValutes }
      * 
+     * @return
+     *     the new instance of {@link EnumReutersValutes }
      */
     public EnumReutersValutes createEnumReutersValutes() {
         return new EnumReutersValutes();
@@ -2496,6 +3106,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link EnumReutersValutesResponse.EnumReutersValutesResult }
      * 
+     * @return
+     *     the new instance of {@link EnumReutersValutesResponse.EnumReutersValutesResult }
      */
     public EnumReutersValutesResponse.EnumReutersValutesResult createEnumReutersValutesResponseEnumReutersValutesResult() {
         return new EnumReutersValutesResponse.EnumReutersValutesResult();
@@ -2504,6 +3116,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetReutersCursOnDateXML }
      * 
+     * @return
+     *     the new instance of {@link GetReutersCursOnDateXML }
      */
     public GetReutersCursOnDateXML createGetReutersCursOnDateXML() {
         return new GetReutersCursOnDateXML();
@@ -2512,6 +3126,8 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetReutersCursOnDateXMLResponse.GetReutersCursOnDateXMLResult }
      * 
+     * @return
+     *     the new instance of {@link GetReutersCursOnDateXMLResponse.GetReutersCursOnDateXMLResult }
      */
     public GetReutersCursOnDateXMLResponse.GetReutersCursOnDateXMLResult createGetReutersCursOnDateXMLResponseGetReutersCursOnDateXMLResult() {
         return new GetReutersCursOnDateXMLResponse.GetReutersCursOnDateXMLResult();
@@ -2527,7 +3143,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/XMLSchema", name = "simpleType")
     public JAXBElement<TopLevelSimpleType> createSimpleType(TopLevelSimpleType value) {
-        return new JAXBElement<TopLevelSimpleType>(_SimpleType_QNAME, TopLevelSimpleType.class, null, value);
+        return new JAXBElement<>(_SimpleType_QNAME, TopLevelSimpleType.class, null, value);
     }
 
     /**
@@ -2540,7 +3156,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/XMLSchema", name = "complexType")
     public JAXBElement<TopLevelComplexType> createComplexType(TopLevelComplexType value) {
-        return new JAXBElement<TopLevelComplexType>(_ComplexType_QNAME, TopLevelComplexType.class, null, value);
+        return new JAXBElement<>(_ComplexType_QNAME, TopLevelComplexType.class, null, value);
     }
 
     /**
@@ -2553,7 +3169,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/XMLSchema", name = "group")
     public JAXBElement<NamedGroup> createGroup(NamedGroup value) {
-        return new JAXBElement<NamedGroup>(_Group_QNAME, NamedGroup.class, null, value);
+        return new JAXBElement<>(_Group_QNAME, NamedGroup.class, null, value);
     }
 
     /**
@@ -2566,7 +3182,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/XMLSchema", name = "attributeGroup")
     public JAXBElement<NamedAttributeGroup> createAttributeGroup(NamedAttributeGroup value) {
-        return new JAXBElement<NamedAttributeGroup>(_AttributeGroup_QNAME, NamedAttributeGroup.class, null, value);
+        return new JAXBElement<>(_AttributeGroup_QNAME, NamedAttributeGroup.class, null, value);
     }
 
     /**
@@ -2579,7 +3195,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/XMLSchema", name = "element")
     public JAXBElement<TopLevelElement> createElement(TopLevelElement value) {
-        return new JAXBElement<TopLevelElement>(_Element_QNAME, TopLevelElement.class, null, value);
+        return new JAXBElement<>(_Element_QNAME, TopLevelElement.class, null, value);
     }
 
     /**
@@ -2592,7 +3208,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/XMLSchema", name = "attribute")
     public JAXBElement<TopLevelAttribute> createAttribute(TopLevelAttribute value) {
-        return new JAXBElement<TopLevelAttribute>(_Attribute_QNAME, TopLevelAttribute.class, null, value);
+        return new JAXBElement<>(_Attribute_QNAME, TopLevelAttribute.class, null, value);
     }
 
     /**
@@ -2605,7 +3221,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/XMLSchema", name = "anyAttribute")
     public JAXBElement<Wildcard> createAnyAttribute(Wildcard value) {
-        return new JAXBElement<Wildcard>(_AnyAttribute_QNAME, Wildcard.class, null, value);
+        return new JAXBElement<>(_AnyAttribute_QNAME, Wildcard.class, null, value);
     }
 
     /**
@@ -2618,7 +3234,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/XMLSchema", name = "all")
     public JAXBElement<All> createAll(All value) {
-        return new JAXBElement<All>(_All_QNAME, All.class, null, value);
+        return new JAXBElement<>(_All_QNAME, All.class, null, value);
     }
 
     /**
@@ -2631,7 +3247,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/XMLSchema", name = "choice")
     public JAXBElement<ExplicitGroup> createChoice(ExplicitGroup value) {
-        return new JAXBElement<ExplicitGroup>(_Choice_QNAME, ExplicitGroup.class, null, value);
+        return new JAXBElement<>(_Choice_QNAME, ExplicitGroup.class, null, value);
     }
 
     /**
@@ -2644,7 +3260,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/XMLSchema", name = "sequence")
     public JAXBElement<ExplicitGroup> createSequence(ExplicitGroup value) {
-        return new JAXBElement<ExplicitGroup>(_Sequence_QNAME, ExplicitGroup.class, null, value);
+        return new JAXBElement<>(_Sequence_QNAME, ExplicitGroup.class, null, value);
     }
 
     /**
@@ -2657,7 +3273,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/XMLSchema", name = "unique")
     public JAXBElement<Keybase> createUnique(Keybase value) {
-        return new JAXBElement<Keybase>(_Unique_QNAME, Keybase.class, null, value);
+        return new JAXBElement<>(_Unique_QNAME, Keybase.class, null, value);
     }
 
     /**
@@ -2670,7 +3286,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/XMLSchema", name = "key")
     public JAXBElement<Keybase> createKey(Keybase value) {
-        return new JAXBElement<Keybase>(_Key_QNAME, Keybase.class, null, value);
+        return new JAXBElement<>(_Key_QNAME, Keybase.class, null, value);
     }
 
     /**
@@ -2683,7 +3299,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/XMLSchema", name = "minExclusive")
     public JAXBElement<Facet> createMinExclusive(Facet value) {
-        return new JAXBElement<Facet>(_MinExclusive_QNAME, Facet.class, null, value);
+        return new JAXBElement<>(_MinExclusive_QNAME, Facet.class, null, value);
     }
 
     /**
@@ -2696,7 +3312,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/XMLSchema", name = "minInclusive")
     public JAXBElement<Facet> createMinInclusive(Facet value) {
-        return new JAXBElement<Facet>(_MinInclusive_QNAME, Facet.class, null, value);
+        return new JAXBElement<>(_MinInclusive_QNAME, Facet.class, null, value);
     }
 
     /**
@@ -2709,7 +3325,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/XMLSchema", name = "maxExclusive")
     public JAXBElement<Facet> createMaxExclusive(Facet value) {
-        return new JAXBElement<Facet>(_MaxExclusive_QNAME, Facet.class, null, value);
+        return new JAXBElement<>(_MaxExclusive_QNAME, Facet.class, null, value);
     }
 
     /**
@@ -2722,7 +3338,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/XMLSchema", name = "maxInclusive")
     public JAXBElement<Facet> createMaxInclusive(Facet value) {
-        return new JAXBElement<Facet>(_MaxInclusive_QNAME, Facet.class, null, value);
+        return new JAXBElement<>(_MaxInclusive_QNAME, Facet.class, null, value);
     }
 
     /**
@@ -2735,7 +3351,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/XMLSchema", name = "fractionDigits")
     public JAXBElement<NumFacet> createFractionDigits(NumFacet value) {
-        return new JAXBElement<NumFacet>(_FractionDigits_QNAME, NumFacet.class, null, value);
+        return new JAXBElement<>(_FractionDigits_QNAME, NumFacet.class, null, value);
     }
 
     /**
@@ -2748,7 +3364,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/XMLSchema", name = "length")
     public JAXBElement<NumFacet> createLength(NumFacet value) {
-        return new JAXBElement<NumFacet>(_Length_QNAME, NumFacet.class, null, value);
+        return new JAXBElement<>(_Length_QNAME, NumFacet.class, null, value);
     }
 
     /**
@@ -2761,7 +3377,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/XMLSchema", name = "minLength")
     public JAXBElement<NumFacet> createMinLength(NumFacet value) {
-        return new JAXBElement<NumFacet>(_MinLength_QNAME, NumFacet.class, null, value);
+        return new JAXBElement<>(_MinLength_QNAME, NumFacet.class, null, value);
     }
 
     /**
@@ -2774,7 +3390,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/XMLSchema", name = "maxLength")
     public JAXBElement<NumFacet> createMaxLength(NumFacet value) {
-        return new JAXBElement<NumFacet>(_MaxLength_QNAME, NumFacet.class, null, value);
+        return new JAXBElement<>(_MaxLength_QNAME, NumFacet.class, null, value);
     }
 
     /**
@@ -2787,7 +3403,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/XMLSchema", name = "enumeration")
     public JAXBElement<NoFixedFacet> createEnumeration(NoFixedFacet value) {
-        return new JAXBElement<NoFixedFacet>(_Enumeration_QNAME, NoFixedFacet.class, null, value);
+        return new JAXBElement<>(_Enumeration_QNAME, NoFixedFacet.class, null, value);
     }
 
     /**
@@ -2800,7 +3416,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/XMLSchema", name = "element", scope = Group.class)
     public JAXBElement<LocalElement> createGroupElement(LocalElement value) {
-        return new JAXBElement<LocalElement>(_Element_QNAME, LocalElement.class, Group.class, value);
+        return new JAXBElement<>(_Element_QNAME, LocalElement.class, Group.class, value);
     }
 
     /**
@@ -2813,7 +3429,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/XMLSchema", name = "group", scope = Group.class)
     public JAXBElement<GroupRef> createGroupGroup(GroupRef value) {
-        return new JAXBElement<GroupRef>(_Group_QNAME, GroupRef.class, Group.class, value);
+        return new JAXBElement<>(_Group_QNAME, GroupRef.class, Group.class, value);
     }
 
 }

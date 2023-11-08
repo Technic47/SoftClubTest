@@ -1,13 +1,9 @@
 package com.softClub.Test.webclient;
 
 import com.softClub.Test.client.gen.GetCursOnDate;
-import com.softClub.Test.client.gen.GetCursOnDateResponse;
-import com.softClub.Test.client.gen.ObjectFactory;
 import com.softClub.Test.client.models.generated.ValuteData;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.Unmarshaller;
-import org.springframework.oxm.jaxb.Jaxb2Marshaller;
-import org.springframework.ws.client.core.WebServiceTemplate;
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
 import org.springframework.ws.soap.client.core.SoapActionCallback;
 import org.w3c.dom.NodeList;
@@ -26,6 +22,7 @@ public class DailyCurrencyClient extends WebServiceGatewaySupport {
 
     /**
      * Main procedure for sending request and consuming response.
+     *
      * @param timeStamp argument for GetCursOnDate service.
      * @return List ValuteCursOnDate objects.
      */
@@ -39,13 +36,13 @@ public class DailyCurrencyClient extends WebServiceGatewaySupport {
     }
 
     /**
-     * Request object constructor.
+     * Request - object constructor.
      *
      * @param timeStamp timestamp argument.
      * @return GetCursOnDate object.
      */
     private GetCursOnDate constructRequest(LocalDateTime timeStamp) {
-        GetCursOnDate request = new ObjectFactory().createGetCursOnDate();
+        GetCursOnDate request = new GetCursOnDate();
         XMLGregorianCalendar calendar = DatatypeFactory
                 .newDefaultInstance()
                 .newXMLGregorianCalendar(timeStamp.toString());
@@ -55,9 +52,10 @@ public class DailyCurrencyClient extends WebServiceGatewaySupport {
 
     /**
      * Unmarshal Nodes to usefull data.
+     *
      * @return List of ValuteCursOnDate objects.
      */
-    private List<ValuteData.ValuteCursOnDate> formListOfData(){
+    private List<ValuteData.ValuteCursOnDate> formListOfData() {
         List<ValuteData.ValuteCursOnDate> list = new ArrayList<>();
         try {
             JAXBContext jc = JAXBContext.newInstance(ValuteData.ValuteCursOnDate.class);

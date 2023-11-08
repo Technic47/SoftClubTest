@@ -11,19 +11,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType name="groupRef"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}realGroup"&gt;
- *       &lt;sequence&gt;
- *         &lt;element ref="{http://www.w3.org/2001/XMLSchema}annotation" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}QName" /&gt;
- *       &lt;anyAttribute processContents='lax' namespace='##other'/&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType name="groupRef">
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}realGroup">
+ *       <sequence>
+ *         <element ref="{http://www.w3.org/2001/XMLSchema}annotation" minOccurs="0"/>
+ *       </sequence>
+ *       <attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}QName" />
+ *       <anyAttribute processContents='lax' namespace='##other'/>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */

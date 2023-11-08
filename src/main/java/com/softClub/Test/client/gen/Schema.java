@@ -21,35 +21,35 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType&gt;
- *   &lt;complexContent&gt;
- *     &lt;extension base="{http://www.w3.org/2001/XMLSchema}openAttrs"&gt;
- *       &lt;sequence&gt;
- *         &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
- *           &lt;element ref="{http://www.w3.org/2001/XMLSchema}include"/&gt;
- *           &lt;element ref="{http://www.w3.org/2001/XMLSchema}import"/&gt;
- *           &lt;element ref="{http://www.w3.org/2001/XMLSchema}redefine"/&gt;
- *           &lt;element ref="{http://www.w3.org/2001/XMLSchema}annotation"/&gt;
- *         &lt;/choice&gt;
- *         &lt;sequence maxOccurs="unbounded" minOccurs="0"&gt;
- *           &lt;group ref="{http://www.w3.org/2001/XMLSchema}schemaTop"/&gt;
- *           &lt;element ref="{http://www.w3.org/2001/XMLSchema}annotation" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;/sequence&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="targetNamespace" type="{http://www.w3.org/2001/XMLSchema}anyURI" /&gt;
- *       &lt;attribute name="version" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
- *       &lt;attribute name="finalDefault" type="{http://www.w3.org/2001/XMLSchema}fullDerivationSet" default="" /&gt;
- *       &lt;attribute name="blockDefault" type="{http://www.w3.org/2001/XMLSchema}blockSet" default="" /&gt;
- *       &lt;attribute name="attributeFormDefault" type="{http://www.w3.org/2001/XMLSchema}formChoice" default="unqualified" /&gt;
- *       &lt;attribute name="elementFormDefault" type="{http://www.w3.org/2001/XMLSchema}formChoice" default="unqualified" /&gt;
- *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" /&gt;
- *       &lt;attribute ref="{http://www.w3.org/XML/1998/namespace}lang"/&gt;
- *       &lt;anyAttribute processContents='lax' namespace='##other'/&gt;
- *     &lt;/extension&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType>
+ *   <complexContent>
+ *     <extension base="{http://www.w3.org/2001/XMLSchema}openAttrs">
+ *       <sequence>
+ *         <choice maxOccurs="unbounded" minOccurs="0">
+ *           <element ref="{http://www.w3.org/2001/XMLSchema}include"/>
+ *           <element ref="{http://www.w3.org/2001/XMLSchema}import"/>
+ *           <element ref="{http://www.w3.org/2001/XMLSchema}redefine"/>
+ *           <element ref="{http://www.w3.org/2001/XMLSchema}annotation"/>
+ *         </choice>
+ *         <sequence maxOccurs="unbounded" minOccurs="0">
+ *           <group ref="{http://www.w3.org/2001/XMLSchema}schemaTop"/>
+ *           <element ref="{http://www.w3.org/2001/XMLSchema}annotation" maxOccurs="unbounded" minOccurs="0"/>
+ *         </sequence>
+ *       </sequence>
+ *       <attribute name="targetNamespace" type="{http://www.w3.org/2001/XMLSchema}anyURI" />
+ *       <attribute name="version" type="{http://www.w3.org/2001/XMLSchema}token" />
+ *       <attribute name="finalDefault" type="{http://www.w3.org/2001/XMLSchema}fullDerivationSet" default="" />
+ *       <attribute name="blockDefault" type="{http://www.w3.org/2001/XMLSchema}blockSet" default="" />
+ *       <attribute name="attributeFormDefault" type="{http://www.w3.org/2001/XMLSchema}formChoice" default="unqualified" />
+ *       <attribute name="elementFormDefault" type="{http://www.w3.org/2001/XMLSchema}formChoice" default="unqualified" />
+ *       <attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" />
+ *       <attribute ref="{http://www.w3.org/XML/1998/namespace}lang"/>
+ *       <anyAttribute processContents='lax' namespace='##other'/>
+ *     </extension>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -112,8 +112,8 @@ public class Schema
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the includeOrImportOrRedefine property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the includeOrImportOrRedefine property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -130,10 +130,12 @@ public class Schema
      * {@link Redefine }
      * 
      * 
+     * @return
+     *     The value of the includeOrImportOrRedefine property.
      */
     public List<OpenAttrs> getIncludeOrImportOrRedefine() {
         if (includeOrImportOrRedefine == null) {
-            includeOrImportOrRedefine = new ArrayList<OpenAttrs>();
+            includeOrImportOrRedefine = new ArrayList<>();
         }
         return this.includeOrImportOrRedefine;
     }
@@ -144,8 +146,8 @@ public class Schema
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the simpleTypeOrComplexTypeOrGroup property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the simpleTypeOrComplexTypeOrGroup property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -166,10 +168,12 @@ public class Schema
      * {@link TopLevelSimpleType }
      * 
      * 
+     * @return
+     *     The value of the simpleTypeOrComplexTypeOrGroup property.
      */
     public List<OpenAttrs> getSimpleTypeOrComplexTypeOrGroup() {
         if (simpleTypeOrComplexTypeOrGroup == null) {
-            simpleTypeOrComplexTypeOrGroup = new ArrayList<OpenAttrs>();
+            simpleTypeOrComplexTypeOrGroup = new ArrayList<>();
         }
         return this.simpleTypeOrComplexTypeOrGroup;
     }
@@ -228,8 +232,8 @@ public class Schema
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the finalDefault property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the finalDefault property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -243,10 +247,12 @@ public class Schema
      * {@link String }
      * 
      * 
+     * @return
+     *     The value of the finalDefault property.
      */
     public List<String> getFinalDefault() {
         if (finalDefault == null) {
-            finalDefault = new ArrayList<String>();
+            finalDefault = new ArrayList<>();
         }
         return this.finalDefault;
     }
@@ -257,8 +263,8 @@ public class Schema
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the blockDefault property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the blockDefault property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -272,10 +278,12 @@ public class Schema
      * {@link String }
      * 
      * 
+     * @return
+     *     The value of the blockDefault property.
      */
     public List<String> getBlockDefault() {
         if (blockDefault == null) {
-            blockDefault = new ArrayList<String>();
+            blockDefault = new ArrayList<>();
         }
         return this.blockDefault;
     }

@@ -4,6 +4,7 @@ package com.softClub.Test.client.gen;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.namespace.QName;
 import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -15,7 +16,6 @@ import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
 import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import javax.xml.namespace.QName;
 
 
 /**
@@ -30,33 +30,33 @@ import javax.xml.namespace.QName;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType name="element"&gt;
- *   &lt;complexContent&gt;
- *     &lt;extension base="{http://www.w3.org/2001/XMLSchema}annotated"&gt;
- *       &lt;sequence&gt;
- *         &lt;choice minOccurs="0"&gt;
- *           &lt;element name="simpleType" type="{http://www.w3.org/2001/XMLSchema}localSimpleType"/&gt;
- *           &lt;element name="complexType" type="{http://www.w3.org/2001/XMLSchema}localComplexType"/&gt;
- *         &lt;/choice&gt;
- *         &lt;group ref="{http://www.w3.org/2001/XMLSchema}identityConstraint" maxOccurs="unbounded" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attGroup ref="{http://www.w3.org/2001/XMLSchema}occurs"/&gt;
- *       &lt;attGroup ref="{http://www.w3.org/2001/XMLSchema}defRef"/&gt;
- *       &lt;attribute name="type" type="{http://www.w3.org/2001/XMLSchema}QName" /&gt;
- *       &lt;attribute name="substitutionGroup" type="{http://www.w3.org/2001/XMLSchema}QName" /&gt;
- *       &lt;attribute name="default" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *       &lt;attribute name="fixed" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *       &lt;attribute name="nillable" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
- *       &lt;attribute name="abstract" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
- *       &lt;attribute name="final" type="{http://www.w3.org/2001/XMLSchema}derivationSet" /&gt;
- *       &lt;attribute name="block" type="{http://www.w3.org/2001/XMLSchema}blockSet" /&gt;
- *       &lt;attribute name="form" type="{http://www.w3.org/2001/XMLSchema}formChoice" /&gt;
- *       &lt;anyAttribute processContents='lax' namespace='##other'/&gt;
- *     &lt;/extension&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType name="element">
+ *   <complexContent>
+ *     <extension base="{http://www.w3.org/2001/XMLSchema}annotated">
+ *       <sequence>
+ *         <choice minOccurs="0">
+ *           <element name="simpleType" type="{http://www.w3.org/2001/XMLSchema}localSimpleType"/>
+ *           <element name="complexType" type="{http://www.w3.org/2001/XMLSchema}localComplexType"/>
+ *         </choice>
+ *         <group ref="{http://www.w3.org/2001/XMLSchema}identityConstraint" maxOccurs="unbounded" minOccurs="0"/>
+ *       </sequence>
+ *       <attGroup ref="{http://www.w3.org/2001/XMLSchema}occurs"/>
+ *       <attGroup ref="{http://www.w3.org/2001/XMLSchema}defRef"/>
+ *       <attribute name="type" type="{http://www.w3.org/2001/XMLSchema}QName" />
+ *       <attribute name="substitutionGroup" type="{http://www.w3.org/2001/XMLSchema}QName" />
+ *       <attribute name="default" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *       <attribute name="fixed" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *       <attribute name="nillable" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
+ *       <attribute name="abstract" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
+ *       <attribute name="final" type="{http://www.w3.org/2001/XMLSchema}derivationSet" />
+ *       <attribute name="block" type="{http://www.w3.org/2001/XMLSchema}blockSet" />
+ *       <attribute name="form" type="{http://www.w3.org/2001/XMLSchema}formChoice" />
+ *       <anyAttribute processContents='lax' namespace='##other'/>
+ *     </extension>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -169,8 +169,8 @@ public abstract class Element
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the identityConstraint property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the identityConstraint property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -186,10 +186,12 @@ public abstract class Element
      * {@link JAXBElement }{@code <}{@link Keybase }{@code >}
      * 
      * 
+     * @return
+     *     The value of the identityConstraint property.
      */
     public List<Object> getIdentityConstraint() {
         if (identityConstraint == null) {
-            identityConstraint = new ArrayList<Object>();
+            identityConstraint = new ArrayList<>();
         }
         return this.identityConstraint;
     }
@@ -352,8 +354,8 @@ public abstract class Element
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the final property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the final property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -367,10 +369,12 @@ public abstract class Element
      * {@link String }
      * 
      * 
+     * @return
+     *     The value of the final property.
      */
     public List<String> getFinal() {
         if (_final == null) {
-            _final = new ArrayList<String>();
+            _final = new ArrayList<>();
         }
         return this._final;
     }
@@ -381,8 +385,8 @@ public abstract class Element
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the block property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the block property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -396,10 +400,12 @@ public abstract class Element
      * {@link String }
      * 
      * 
+     * @return
+     *     The value of the block property.
      */
     public List<String> getBlock() {
         if (block == null) {
-            block = new ArrayList<String>();
+            block = new ArrayList<>();
         }
         return this.block;
     }

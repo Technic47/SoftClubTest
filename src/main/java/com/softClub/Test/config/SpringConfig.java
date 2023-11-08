@@ -3,6 +3,7 @@ package com.softClub.Test.config;
 import com.softClub.Test.webclient.DailyCurrencyClient;
 import com.softClub.Test.webclient.ResponseInterceptor;
 import jakarta.xml.bind.Marshaller;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -27,6 +28,14 @@ import java.util.concurrent.Executor;
 @EnableAsync
 @EnableScheduling
 public class SpringConfig implements AsyncConfigurer {
+    public static int PRECISION = 3;
+    @Value("${system.precision}")
+    private int precision;
+
+    @Value("${system.precision}")
+    public void setPrecision(int precision){
+        PRECISION = precision;
+    }
     @Override
     public Executor getAsyncExecutor() {
         ThreadPoolTaskExecutor threadPoolTaskExecutor = new ThreadPoolTaskExecutor();
@@ -42,7 +51,8 @@ public class SpringConfig implements AsyncConfigurer {
             put(Marshaller.JAXB_FORMATTED_OUTPUT, true);
         }});
         marshaller.setContextPaths(
-                "com.softClub.Test.client.gen");
+                "com.softClub.Test.client.gen",
+                "com.softClub.Test.client.models.generated");
         marshaller.afterPropertiesSet();
         return marshaller;
     }

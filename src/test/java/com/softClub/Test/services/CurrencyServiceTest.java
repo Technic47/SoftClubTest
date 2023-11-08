@@ -1,7 +1,7 @@
 package com.softClub.Test.services;
 
 import com.softClub.Test.exceptionhendlers.ResourceNotFoundException;
-import com.softClub.Test.models.AbstractModelsTests;
+import com.softClub.Test.models.AbstractModelsTest;
 import com.softClub.Test.models.Currency;
 import com.softClub.Test.repositories.CurrencyRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.*;
 
-class CurrencyServiceTest extends AbstractModelsTests {
+class CurrencyServiceTest extends AbstractModelsTest {
     private CurrencyRepository repository;
     private CurrencyService service;
 

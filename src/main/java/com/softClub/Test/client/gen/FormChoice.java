@@ -10,14 +10,14 @@ import jakarta.xml.bind.annotation.XmlType;
  * <p>Java class for formChoice.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <pre>
- * &lt;simpleType name="formChoice"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *     &lt;enumeration value="qualified"/&gt;
- *     &lt;enumeration value="unqualified"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
- * </pre>
+ * <pre>{@code
+ * <simpleType name="formChoice">
+ *   <restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *     <enumeration value="qualified"/>
+ *     <enumeration value="unqualified"/>
+ *   </restriction>
+ * </simpleType>
+ * }</pre>
  * 
  */
 @XmlType(name = "formChoice", namespace = "http://www.w3.org/2001/XMLSchema")

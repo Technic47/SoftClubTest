@@ -35,6 +35,17 @@ public class CurrencyUpdateService {
         updateCurrencies();
     }
 
+    public List<ValuteData.ValuteCursOnDate> updateAndGet(){
+        try {
+            List<ValuteData.ValuteCursOnDate> cursOnDate = dailyCurrencyClient.getCursOnDate(LocalDateTime.now());
+            updateProcedure(cursOnDate);
+            System.out.println("Currencies are updated.");
+            return cursOnDate;
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage());
+        }
+    }
+
     private void updateCurrencies() {
         try {
             updateProcedure(dailyCurrencyClient.getCursOnDate(LocalDateTime.now()));

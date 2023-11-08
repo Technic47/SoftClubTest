@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.xml.namespace.QName;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAnyAttribute;
@@ -14,7 +15,6 @@ import jakarta.xml.bind.annotation.XmlMixed;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
-import javax.xml.namespace.QName;
 import org.w3c.dom.Element;
 
 
@@ -23,20 +23,20 @@ import org.w3c.dom.Element;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence maxOccurs="unbounded" minOccurs="0"&gt;
- *         &lt;any processContents='lax'/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="source" type="{http://www.w3.org/2001/XMLSchema}anyURI" /&gt;
- *       &lt;attribute ref="{http://www.w3.org/XML/1998/namespace}lang"/&gt;
- *       &lt;anyAttribute processContents='lax' namespace='##other'/&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * <pre>{@code
+ * <complexType>
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence maxOccurs="unbounded" minOccurs="0">
+ *         <any processContents='lax'/>
+ *       </sequence>
+ *       <attribute name="source" type="{http://www.w3.org/2001/XMLSchema}anyURI" />
+ *       <attribute ref="{http://www.w3.org/XML/1998/namespace}lang"/>
+ *       <anyAttribute processContents='lax' namespace='##other'/>
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
+ * }</pre>
  * 
  * 
  */
@@ -56,7 +56,7 @@ public class Documentation {
     @XmlAttribute(name = "lang", namespace = "http://www.w3.org/XML/1998/namespace")
     protected String lang;
     @XmlAnyAttribute
-    private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+    private Map<QName, String> otherAttributes = new HashMap<>();
 
     /**
      * Gets the value of the content property.
@@ -64,8 +64,8 @@ public class Documentation {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the content property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the content property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -81,10 +81,12 @@ public class Documentation {
      * {@link Element }
      * 
      * 
+     * @return
+     *     The value of the content property.
      */
     public List<Object> getContent() {
         if (content == null) {
-            content = new ArrayList<Object>();
+            content = new ArrayList<>();
         }
         return this.content;
     }
