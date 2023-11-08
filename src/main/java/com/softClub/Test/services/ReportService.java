@@ -50,7 +50,7 @@ public class ReportService {
         for (int i = 0; i < operations.size(); i++) {
             FinOperation operation = operations.get(i);
             BigDecimal sum = operation.getSum();
-            sum = sum.multiply(new BigDecimal(vunitRate)).setScale(PRECISION, RoundingMode.HALF_UP);
+            sum = sum.divide(new BigDecimal(vunitRate),PRECISION, RoundingMode.HALF_UP);
             operation.setSum(sum);
             dtoResponses[i] = new FinOperationDTOResponse(operation);
         }
