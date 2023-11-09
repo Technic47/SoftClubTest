@@ -44,8 +44,8 @@ public class CurrencyReportController {
     public ResponseEntity<?> formReport(@Valid @RequestBody ReportRequestDTO requestDTO) {
         CompletableFuture<ReportDTO> reportTask = service.formReport(
                 requestDTO.getVchCode(),
-                requestDTO.getStartDateTime(),
-                requestDTO.getFinishDateTime()
+                requestDTO.getPeriodStart(),
+                requestDTO.getPeriodFinish()
         );
         try {
             ReportDTO report = reportTask.get(3000, MILLISECONDS);

@@ -17,9 +17,9 @@ public class ReportRequestDTO {
     @Size(min = 1, max = 4)
     private String vchCode;
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime startDateTime;
+    private LocalDateTime periodStart;
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime finishDateTime;
+    private LocalDateTime periodFinish;
 
     public String getVchCode() {
         return vchCode;
@@ -29,19 +29,19 @@ public class ReportRequestDTO {
         this.vchCode = vchCode;
     }
 
-    public LocalDateTime getStartDateTime() {
-        return startDateTime;
+    public LocalDateTime getPeriodStart() {
+        return periodStart;
     }
 
-    public void setStartDateTime(LocalDateTime startDateTime) {
-        this.startDateTime = startDateTime;
+    public void setPeriodStart(LocalDateTime periodStart) {
+        this.periodStart = periodStart;
     }
 
-    public LocalDateTime getFinishDateTime() {
-        return finishDateTime;
+    public LocalDateTime getPeriodFinish() {
+        return periodFinish;
     }
 
-    public void setFinishDateTime(LocalDateTime finishDateTime) {
-        this.finishDateTime = finishDateTime;
+    public void setPeriodFinish(LocalDateTime periodFinish) {
+        this.periodFinish = periodFinish;
     }
 }

@@ -3,6 +3,7 @@ package com.softClub.Test.models.dto;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.softClub.Test.models.FinOperation;
 
+import java.math.BigDecimal;
 import java.math.MathContext;
 import java.math.RoundingMode;
 import java.time.LocalDateTime;
@@ -23,6 +24,13 @@ public class FinOperationDTOResponse {
         this.dateTime = operation.getDateTime();
         this.description = operation.getDescription();
         this.sum = operation.getSum().stripTrailingZeros().toString();
+    }
+
+    public FinOperationDTOResponse(FinOperation operation, BigDecimal newSum) {
+        this.id = operation.getId();
+        this.dateTime = operation.getDateTime();
+        this.description = operation.getDescription();
+        this.sum = newSum.stripTrailingZeros().toString();
     }
 
     public Long getId() {

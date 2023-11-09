@@ -8,7 +8,6 @@ import org.springframework.http.MediaType;
 
 import java.time.LocalDateTime;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -29,13 +28,13 @@ class CurrencyReportControllerTest extends AbstractControllersTest{
 
         ReportRequestDTO requestDTO = new ReportRequestDTO();
         requestDTO.setVchCode("USD");
-        requestDTO.setStartDateTime(LocalDateTime.of(
+        requestDTO.setPeriodStart(LocalDateTime.of(
                 now.getYear(),
                 now.getMonth(),
                 now.getDayOfMonth(),
                 0,
                 0));
-        requestDTO.setFinishDateTime(LocalDateTime.now());
+        requestDTO.setPeriodFinish(LocalDateTime.now());
 
         mockMvc.perform(post("/report")
                 .content(om.writeValueAsString(requestDTO))
@@ -51,8 +50,8 @@ class CurrencyReportControllerTest extends AbstractControllersTest{
 
         ReportRequestDTO requestDTO = new ReportRequestDTO();
         requestDTO.setVchCode("USD");
-        requestDTO.setStartDateTime(LocalDateTime.now());
-        requestDTO.setFinishDateTime(LocalDateTime.now());
+        requestDTO.setPeriodStart(LocalDateTime.now());
+        requestDTO.setPeriodFinish(LocalDateTime.now());
 
         mockMvc.perform(post("/report")
                         .content(om.writeValueAsString(requestDTO))
@@ -65,8 +64,8 @@ class CurrencyReportControllerTest extends AbstractControllersTest{
     void formReportWrongCurrency() throws Exception {
         ReportRequestDTO requestDTO = new ReportRequestDTO();
         requestDTO.setVchCode("USDd");
-        requestDTO.setStartDateTime(LocalDateTime.now());
-        requestDTO.setFinishDateTime(LocalDateTime.now());
+        requestDTO.setPeriodStart(LocalDateTime.now());
+        requestDTO.setPeriodFinish(LocalDateTime.now());
 
         mockMvc.perform(post("/report")
                         .content(om.writeValueAsString(requestDTO))

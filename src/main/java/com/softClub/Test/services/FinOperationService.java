@@ -14,7 +14,7 @@ public class FinOperationService extends AbstractService<FinOperation, FinOperat
         super(repository);
     }
 
-    public List<FinOperation> findInPeriod(LocalDateTime dateTime, LocalDateTime dateTime2) {
-        return repository.findByDateTimeBetween(dateTime, dateTime2);
+    public List<FinOperation> findInPeriod(LocalDateTime periodStart, LocalDateTime periodFinish) {
+        return repository.findByDateTimeBetween(periodStart, periodFinish);
     }
 }

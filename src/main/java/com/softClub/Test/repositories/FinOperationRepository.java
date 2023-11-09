@@ -9,5 +9,5 @@ import java.util.List;
 
 @Repository
 public interface FinOperationRepository extends AbstractRepository<FinOperation> {
-    List<FinOperation> findByDateTimeBetween(LocalDateTime dateTime, LocalDateTime dateTime2);
+    List<FinOperation> findByDateTimeBetween(LocalDateTime periodStart, LocalDateTime periodFinish);
 }

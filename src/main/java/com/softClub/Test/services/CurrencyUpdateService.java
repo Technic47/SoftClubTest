@@ -39,7 +39,7 @@ public class CurrencyUpdateService {
         try {
             List<ValuteData.ValuteCursOnDate> cursOnDate = dailyCurrencyClient.getCursOnDate(LocalDateTime.now());
             updateProcedure(cursOnDate);
-            System.out.println("Currencies are updated.");
+//            System.out.println("Currencies are updated.");
             return cursOnDate;
         } catch (Exception e) {
             throw new RuntimeException(e.getMessage());
@@ -49,7 +49,7 @@ public class CurrencyUpdateService {
     private void updateCurrencies() {
         try {
             updateProcedure(dailyCurrencyClient.getCursOnDate(LocalDateTime.now()));
-            System.out.println("Currencies are updated.");
+//            System.out.println("Currencies are updated.");
         } catch (Exception e) {
             throw new RuntimeException(e.getMessage());
         }
