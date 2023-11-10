@@ -13,6 +13,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
 
 import static com.softClub.Test.config.SpringConfig.PRECISION;
 
@@ -29,17 +30,25 @@ public class ReportService {
         this.operationService = operationService;
     }
 
-    /** Form ReportDTO class with all important information.
-     * @param VchCode code of currency
-     * @param periodStart begin point.
+    /**
+     * Form ReportDTO class with all important information.
+     *
+     * @param VchCode      code of currency
+     * @param periodStart  begin point.
      * @param periodFinish finish point.
      * @return Future object with ReportDTO class.
      */
     @Async
     public CompletableFuture<ReportDTO> formReport(String VchCode, LocalDateTime periodStart, LocalDateTime periodFinish) {
-        Double vunitRate = getVunitRate(VchCode);
-        List<FinOperation> operations = getOperations(periodStart, periodFinish);
-        FinOperationDTOResponse[] dtoResponses = new FinOperationDTOResponse[operations.size()];
+        double vunitRate = getVunitRate(VchCode);
+        List<FinOperation> operationsToReCalc = getOperations(periodStart, periodFinish);
+
+        FinOperationDTOResponse[] dtoResponses = operationsToReCalc.stream()
+                .peek(operation -> {
+                    BigDecimal newSum = operation.getSum().divide(new BigDecimal(vunitRate), PRECISION, RoundingMode.HALF_UP);
+                    operation.setSum(newSum);
+                }).map(FinOperationDTOResponse::new)
+                .toArray(FinOperationDTOResponse[]::new);
 
         ReportDTO report = new ReportDTO();
         report.setVchCode(VchCode);
@@ -48,25 +57,12 @@ public class ReportService {
         report.setFinishTime(periodFinish);
         report.setOperations(dtoResponses);
 
-        for (int i = 0; i < operations.size(); i++) {
-            FinOperation operation = operations.get(i);
-            BigDecimal sum = operation.getSum();
-            sum = sum.divide(new BigDecimal(vunitRate),PRECISION, RoundingMode.HALF_UP);
-            operation.setSum(sum);
-            dtoResponses[i] = new FinOperationDTOResponse(operation);
-        }
-
-        AtomicInteger i = new AtomicInteger(0);
-        operations.forEach(item -> {
-            BigDecimal newSum = item.getSum().divide(new BigDecimal(vunitRate),PRECISION, RoundingMode.HALF_UP);
-            dtoResponses[i.getAndIncrement()] = new FinOperationDTOResponse(item, newSum);
-        });
-
         return CompletableFuture.completedFuture(report);
     }
 
     /**
      * Get ratio for calculation.
+     *
      * @param VchCode code for searching.
      * @return Double representation of ratio.
      */
@@ -78,7 +74,8 @@ public class ReportService {
     /**
      * Get FinOperations for period of time.
      * Makes simple sanity check.
-     * @param periodStart begin point.
+     *
+     * @param periodStart  begin point.
      * @param periodFinish finish point.
      * @return List of found FinOperations.
      */

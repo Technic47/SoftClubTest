@@ -9,13 +9,12 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
 
@@ -25,7 +24,7 @@ class ReportServiceTest extends AbstractModelsTest {
     private ReportService reportService;
 
     @BeforeEach
-    void setUp(){
+    void setUp() {
         currencyService = mock(CurrencyService.class);
         operationService = mock(FinOperationService.class);
         reportService = new ReportService(currencyService, operationService);
@@ -45,8 +44,7 @@ class ReportServiceTest extends AbstractModelsTest {
                 formFinOperation()
         );
 
-        List<String> checkList = new ArrayList<>();
-        list.forEach(item -> checkList.add(item.getSum().toString()));
+        List<String> checkList = list.stream().map(operation -> operation.getSum().toString()).toList();
 
         doReturn(currency)
                 .when(currencyService)
@@ -55,8 +53,7 @@ class ReportServiceTest extends AbstractModelsTest {
                 .when(operationService)
                 .findInPeriod(time1, time2);
 
-        CompletableFuture<ReportDTO> reportDTOCompletableFuture = reportService.formReport(code, time1, time2);
-        ReportDTO reportDTO = reportDTOCompletableFuture.get();
+        ReportDTO reportDTO = reportService.formReport(code, time1, time2).get();
 
         FinOperationDTOResponse[] operations = reportDTO.getOperations();
 
